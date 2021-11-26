@@ -6,11 +6,11 @@ ENCRYPTION BY MUTILPLE SUBTITUTION
 REQUIRED 
 -------------------------------------
 [ for copy automatically coded message ]
+
 pip install pyperclip
 
 
-for generate encrytion key
-going to keylib_generator.py, uncomment  #gen_file and run !
+for generate encrytion key going to keylib_generator.py, uncomment  #gen_file and run !
 
 -------------------------------------
 Init)
@@ -23,13 +23,16 @@ subtitution
 
 
 I) Block A
+-------------------------------------
 the messages are slightly modified by functions.
 
 II) Block B
+-------------------------------------
 Each character of the message is substituted by a group
 of randomly generated characters.
 
 III) Block C
+-------------------------------------
 characters of group b are chosen randomly
 and are added to the already encoded message.
 
