@@ -12,7 +12,7 @@ pip install pyperclip
 for generate encrytion key
 going to keylib_generator.py, uncomment  #gen_file and run !
 
-
+-------------------------------------
 Init)
 I take a character group and divide it into
 of them:
