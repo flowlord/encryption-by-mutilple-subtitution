@@ -63,6 +63,7 @@ the wonderful world of secrets, letters,
 numbers and letters.
 
 -----------------------------------
+Example of coded messages: https://solarissoftwarebulares.fun/
 Have fun you ;)
 
 
