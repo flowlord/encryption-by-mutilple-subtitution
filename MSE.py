@@ -72,6 +72,9 @@ def check_char(msg):
     return 0 in v
 
 
+def get_len(char):
+    return int(len(char)/2)
+
 
 class Block_A():
     
@@ -213,6 +216,7 @@ class Block_B():
         copy(plain_text)
         return plain_text
     
+
     def deconfuse(code):
         """
         create a new character string without the 
@@ -253,7 +257,18 @@ class Block_B():
             return coded_msg
 
 class Block_C():
+
+    def blop64(coded_msg):
+
+        if len(coded_msg)%2 == 1:
+            coded_msg = coded_msg + choice(group_b)
+
+        a = coded_msg[:get_len(coded_msg)]
+        b = coded_msg[get_len(coded_msg):]
+
+        return b+a
     
+
     def chaos(plain_text,x):
         """Add randomly characters from group_b to plain_text
           in a randomly chosen position, x times.
@@ -272,16 +287,16 @@ class Block_C():
 
 def mse_cipher(msg):
     coded  = Block_A.complicate(msg)
-    
     coded = Block_B.cipher(coded)
-    
-    coded = Block_C.chaos(coded,randint(100,1000))
+    coded = Block_C.chaos(coded,randint(100,500))
+    coded = Block_C.blop64(coded)
     
     return coded
 
 
 def mse_decipher(coded):
-    msg = Block_B.deconfuse(coded)
+    msg = Block_C.blop64(coded)
+    msg = Block_B.deconfuse(msg)
     msg = Block_B.decipher(msg)
     
     return msg
