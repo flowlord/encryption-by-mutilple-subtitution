@@ -261,8 +261,8 @@ class Block_C():
     def blop64(coded_msg):
         """
         Example:
-            XXXOOOO --> longeur impair --> XXXOOOOP --> OOOPXXXO
-            XXXOOO --> longeur pair --> OOOXXX
+            XXXOOOO --> odd length --> XXXOOOO + P --> OOOPXXXO
+            XXXOOO --> even length --> OOOXXX
         """
 
         if get_len(coded_msg)%2 == 1:
@@ -299,8 +299,8 @@ def mse_cipher(msg):
     return coded
 
 
-def mse_decipher(coded):
-    msg = Block_C.blop64(coded)
+def mse_decipher(coded_msg):
+    msg = Block_C.blop64(coded_msg)
     msg = Block_B.deconfuse(msg)
     msg = Block_B.decipher(msg)
     
