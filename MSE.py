@@ -37,8 +37,9 @@ def revlst(key):
 
 def check_word(text):
     """
-    
+    Check if a word is in the word list
     """
+
     text = text.split(' ')
 
     v = []
@@ -57,8 +58,8 @@ def check_word(text):
 
 def check_char(msg):
     """
-    return True si il a un caractère
-    qui n'est pas dans la list charac_sub'
+    return True if he has a character
+    which is not in the charac_sub list'
     
     """
     msg = list(msg)
@@ -77,8 +78,6 @@ def get_len(char):
 
 
 class Block_A():
-    
-    #------------------------------------------------------------------------------
 
     def rev(plain_text):
         """
@@ -256,11 +255,17 @@ class Block_B():
         else:
             return coded_msg
 
+
 class Block_C():
 
     def blop64(coded_msg):
+        """
+        Example:
+            XXXOOOO --> longeur impair --> XXXOOOOP --> OOOPXXXO
+            XXXOOO --> longeur pair --> OOOXXX
+        """
 
-        if len(coded_msg)%2 == 1:
+        if get_len(coded_msg)%2 == 1:
             coded_msg = coded_msg + choice(group_b)
 
         a = coded_msg[:get_len(coded_msg)]
