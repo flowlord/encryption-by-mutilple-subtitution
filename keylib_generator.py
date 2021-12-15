@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 # KEY GENERATOR
-# Encryption key generator with
-# the characters of group a
+# Encryption key generator with the characters of group a
 
 from string import ascii_lowercase
 from random import randint,choice
+import os
 
 # I choose the characters i want to substitute
  
@@ -29,7 +29,7 @@ group_b = initpat[m:]
 
 
 # the most common words in English:
-# e,s,d,n,t,r,y,o et l'espace.
+# e,s,d,n,t,r,y,o and spacebar.
 freq_letter = 'esdntryo'+space
 
 # authorized word list for encryption
@@ -79,6 +79,9 @@ def gen_listkey():
 
 
 def gen_file():
+    """
+    Generate encryption keys in a python file
+    """
     file = open('keylib.py','w',encoding='utf-8')
     print('[ Generating and writing key ... ]\n')
     slach = '▨'
@@ -99,6 +102,12 @@ def gen_file():
 
     print('keylib.py Generated')
 
-#gen_file()
+
+"""
+For overwrite the previous encryption keys to generate new ones
+"""
+# gen_file()
+
+
 
 

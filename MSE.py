@@ -16,8 +16,13 @@ III) Block C
 
 
 from pyperclip import copy
-from keylib_generator import randint,group_b, nbr_letter_sub, charac_sub,word_lst,choice
-from keylib import listkey,getRandomKey
+from keylib_generator import randint,group_b, nbr_letter_sub, charac_sub,word_lst,choice,gen_file
+
+try:
+    from keylib import listkey,getRandomKey
+except ModuleNotFoundError:
+    gen_file()
+    from keylib import listkey,getRandomKey
 
 
 def revlst(key):
@@ -195,7 +200,11 @@ class Block_A():
 
 
 class Block_B():
-    """docstring for Block_B"""
+    """
+    II) Block B
+        Each character of the message is substituted by a group
+        of randomly generated characters.
+    """
 
     def cipher(plain_text):
         plain_text = plain_text.lower()
