@@ -27,6 +27,3 @@ print(message,'\n\n')
 
 print(mse_decipher(message))
 
-
-
-
