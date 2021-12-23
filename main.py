@@ -20,10 +20,12 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
             'you can help me do my homework','they are there','so far so good']
 
 
-message = example_sentence[0]
+message = 'you can help me do my homework'
 
+print('Encrypted text:\n')
 message = mse_cipher(message)
 print(message,'\n\n')
 
+print('Text decryption:')
 print(mse_decipher(message))
 
