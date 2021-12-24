@@ -10,7 +10,7 @@ Created on Tue Jan 22 10:51:19 2019
 
 """
 
-from MSE import mse_cipher,mse_decipher
+from MSE import mse_cipher,mse_decipher,check_char,check_word
 
 
 example_sentence = ['meeting tonight for speak','hello world','see you at night','where do you live',
@@ -20,12 +20,20 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
             'you can help me do my homework','they are there','so far so good']
 
 
-message = 'you can help me do my homework'
+message = input('Write a little message: ')
 
-print('Encrypted text:\n')
-message = mse_cipher(message)
-print(message,'\n\n')
+if check_char(message) is True:
+	print('there a character that is not in the charac_sub')
+elif check_word(message) is False:
+	print('it has a word that is not in the word list')
+else:
+	print('Encrypted text:\n')
+	message = mse_cipher(message)
+	print(message,'\n\n')
 
-print('Text decryption:')
-print(mse_decipher(message))
+	print('Text decryption:')
+	print(mse_decipher(message))
+
+
+
 
