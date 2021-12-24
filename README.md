@@ -4,7 +4,7 @@
 
 *Experimental encryption for text*
 
-![Teaser image](./docs/ICON.jpg)
+![Teaser image](DOC/ICON.jpg)
 
 I choose the characters that I want to substitute:
 
