@@ -1,9 +1,10 @@
-MSE PROJECT 
-ENCRYPTION BY MUTILPLE SUBTITUTION
+## MSE PROJECT 
+## ENCRYPTION BY MUTILPLE SUBTITUTION
 ---------------------------------------
 
-Experimental encryption for text
+*Experimental encryption for text*
 
+![Teaser image](./docs/ICON.jpg)
 
 I choose the characters that I want to substitute:
 
@@ -12,22 +13,24 @@ I choose the characters that I want to substitute:
 		charac_sub = list(ascii_lowercase+space)
 
 
-I take special characters whatever
-I want except characters that I want to substitute and put them in a file initpat.txt
+I take special characters, I take whatever I want except the characters I want to substitute and put them in an inipat.txt file
 
+I take its full length and divide it into two groups:
+
+![group a and group b](./docs/image_a.png)
 
 I generate encryption keys generate way
 pseudo-random with the characters from the file initpat.txt
 
-		// KEY Example
-		KEYX = [('a','흮⡟𐠔ƚᅍ×〪㊳ऒ⡏'), ('b','𐊅⭏၃❩๩ྫྷ𐤌Ąᎏ'), ('c','ᚉ⟝茅⇑ༀ'), ('d','͊⿅𐐏'), ('e','㌓ⴛ'), ('f','ᥧ⇴Ỷ힋') ... ]
-
+![Encryption keys](./docs/image_b.png)
 
 I substitute the characters
 
-		// Example
-		abc --> 흮⡟𐠔ƚᅍ×〪㊳ऒ⡏𐊅⭏၃❩๩ྫྷ𐤌Ąᎏᚉ⟝茅⇑ༀ
+![Encryption keys](./docs/image_c.png)
 
+I add x times the characters of group b
+
+![Final result](./docs/image_d.png)
 
 I only substitute the words that are in the file word_lst.txt
 
@@ -42,7 +45,6 @@ Initiation
 > group A: to generate the encryption keys
 > group B: to add characters after the subtitution
 
-![group a and group b](./DOC/img_a.png)
 
 I) Block A
 -------------------------------------
