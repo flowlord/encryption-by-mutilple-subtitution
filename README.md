@@ -98,7 +98,7 @@ Tips
 the wonderful world of secrets, letters,
 numbers and letters ...
 
-Example of coded messages: [Example of coded messages](https://solarissoftwarebulares.fun/)
+Example of coded messages: [Web site](https://solarissoftwarebulares.fun/)
 
 Have fun you ;)
 
