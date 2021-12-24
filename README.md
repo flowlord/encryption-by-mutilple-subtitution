@@ -17,20 +17,20 @@ I take special characters, I take whatever I want except the characters I want t
 
 I take its full length and divide it into two groups:
 
-![group a and group b](./docs/img_a.png)
+![group a and group b](./DOC/img_a.png)
 
 I generate encryption keys generate way
 pseudo-random with the characters from the file initpat.txt
 
-![Encryption keys](./docs/img_b.png)
+![Encryption keys](./DOC/img_b.png)
 
 I substitute the characters
 
-![Encryption keys](./docs/img_c.png)
+![Encryption keys](./DOC/img_c.png)
 
 I add x times the characters of group b
 
-![Final result](./docs/img_d.png)
+![Final result](./DOC/img_d.png)
 
 I only substitute the words that are in the file word_lst.txt
 
