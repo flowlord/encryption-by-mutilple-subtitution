@@ -42,6 +42,7 @@ Initiation
 > group A: to generate the encryption keys
 > group B: to add characters after the subtitution
 
+![](DOC/Capture d’écran 2021-12-23 203459.png)
 
 I) Block A
 -------------------------------------
