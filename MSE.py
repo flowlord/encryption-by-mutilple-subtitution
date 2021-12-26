@@ -298,7 +298,7 @@ class Block_C():
 def mse_cipher(msg):
     coded  = Block_A.complicate(msg)
     coded = Block_B.cipher(coded)
-    coded = Block_C.chaos(coded,randint(100,1000))
+    coded = Block_C.chaos(coded,randint(100,500))
     coded = Block_C.blop64(coded)
     
     return coded
