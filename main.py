@@ -20,19 +20,29 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
             'you can help me do my homework','they are there','so far so good']
 
 
-message = input('Write a little message: ')
 
-if check_char(message) is True:
-	print('there a character that is not in the charac_sub')
-elif check_word(message) is False:
-	print('it has a word that is not in the word list')
-else:
-	print('Encrypted text:\n')
-	message = mse_cipher(message)
-	print(message,'\n\n')
+# message = input('Write a little message: ')
 
-	print('Text decryption:')
-	print(mse_decipher(message))
+# if check_char(message) is True:
+# 	print('there a character that is not in the charac_sub')
+# elif check_word(message) is False:
+# 	print('it has a word that is not in the word list')
+# else:
+# 	print('Encrypted text:\n')
+# 	message = mse_cipher(message)
+# 	print(message,'\n\n')
+
+# 	print('Text decryption:')
+# 	print(mse_decipher(message))
+
+
+print('Encrypted text:\n')
+message = mse_cipher('meeting tonight for speak')
+print(message,'\n\n')
+
+print('Text decryption:\n')
+print(mse_decipher(message))
+
 
 
 
