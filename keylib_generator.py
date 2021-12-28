@@ -7,7 +7,7 @@ from random import randint,choice
 from gen_init import*
 
 
-keyNumber = 500
+keyNumber = 100
 
 
 def getRandCharac(x):
@@ -32,7 +32,7 @@ def keygen(nbr_letter_sub):
     key = ''
 
     for charac in range(nbr_letter_sub):
-        letter_lenght = randint(4,10)
+        letter_lenght = randint(8,13)
         freq_letter_lenght = randint(2,3)
         
         if charac_sub[charac] in freq_letter:
@@ -80,5 +80,5 @@ def gen_file():
 """
 for generate new encryption keys or overwrite the previous encryption keys to generate new ones
 """
-#gen_file()
+gen_file()
 

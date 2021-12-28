@@ -60,7 +60,7 @@ def check_word(text):
 def check_char(msg):
     """
     return True if he has a character
-    which is not in the charac_sub list'
+    which is not in the charac_sub list
     
     """
     msg = list(msg)
@@ -298,7 +298,7 @@ class Block_C():
 def mse_cipher(msg):
     coded  = Block_A.complicate(msg)
     coded = Block_B.cipher(coded)
-    coded = Block_C.chaos(coded,randint(100,500))
+    coded = Block_C.chaos(coded,randint(100,3000))
     coded = Block_C.blop64(coded)
     
     return coded
