@@ -89,16 +89,17 @@ Tips
 > This encryption method remains vulnerable
 > to attacks, do not encrypt your data
 > personal with this method !!
-
-> the code is not perfect and some function
-> is not explained a next update will fix all its
-
 -----------------------------------
 
+demo
+---------------------------
+![demo video](DOC/demo.mp4)
+
+---------------------------
 the wonderful world of secrets, letters,
 numbers and letters ...
 
-Example of coded messages: [Web site](https://solarissoftwarebulares.fun/)
+Example of coded messages: [Example of coded messages](https://solarissoftwarebulares.fun/)
 
 Have fun you ;)
 
