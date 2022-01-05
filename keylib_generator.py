@@ -7,7 +7,7 @@ from random import randint,choice
 from gen_init import*
 
 
-keyNumber = 100
+keyNumber = 300
 
 
 def getRandCharac(x):
@@ -80,5 +80,5 @@ def gen_file():
 """
 for generate new encryption keys or overwrite the previous encryption keys to generate new ones
 """
-gen_file()
+#gen_file()
 
