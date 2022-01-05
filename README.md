@@ -89,11 +89,6 @@ Tips
 > This encryption method remains vulnerable
 > to attacks, do not encrypt your data
 > personal with this method !!
------------------------------------
-
-demo
----------------------------
-![demo video](DOC/demo.mp4)
 
 ---------------------------
 the wonderful world of secrets, letters,
