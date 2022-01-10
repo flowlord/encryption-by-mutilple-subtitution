@@ -27,26 +27,6 @@ nbr_letter_sub = len(charac_sub)
 initpat = open('initpat.txt','r',encoding='utf-8').readlines()
 initpat = "".join(initpat)
 
-
-def mix_initpat(x,initpat):
-    """
-    I mix special characters from initpat file x times
-    """
-    initpat = list(initpat)
-
-    for _ in range(x):
-        shuffle(initpat)
-    
-    initpat = "".join(initpat)
-
-    f = open('initpat.txt','w', encoding='utf-8')
-    f.write(initpat)
-    f.close()
-
-
-#mix_initpat(2,initpat)
-
-
 m = int(len(initpat)/2)
 
 group_a = initpat[:m]
@@ -55,10 +35,15 @@ group_b = initpat[m:]
 
 freq_letter = 'esdntryo'+'yzxca'+space
 
-#group_b = initpat[m:] + freq_letter*900
+# Add letters in group b
+letteres = ''.join(charac_sub)*150+freq_letter*200
+group_b = group_b+letteres
 
 word_lst = open('word_lst.txt','r').readlines()
 word_lst = [x.replace('\n','') for x in word_lst]
+
+
+
 
 
 
