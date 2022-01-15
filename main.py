@@ -8,6 +8,9 @@ Created on Tue Jan 22 10:51:19 2019
 
 @author: FLOW LORD
 
+for questions about the project: https:
+//discord.gg/MG4EM6sEFx
+
 """
 
 from MSE import mse_cipher,mse_decipher,check_char,check_word
