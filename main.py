@@ -8,9 +8,6 @@ Created on Tue Jan 22 10:51:19 2019
 
 @author: FLOW LORD
 
-for questions about the project: https:
-//discord.gg/MG4EM6sEFx
-
 """
 
 from MSE import mse_cipher,mse_decipher,check_char,check_word
@@ -23,7 +20,7 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
             'you can help me do my homework','they are there','so far so good']
 
 
-
+# Encryption with verification
 # message = input('Write a little message: ')
 
 # if check_char(message) is True:
@@ -38,6 +35,30 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
 # 	print('Text decryption:')
 # 	print(mse_decipher(message))
 
+# -------------------------------
+
+# to decipher a code
+# code = """
+# PAST YOUR SECRET CODE HERE
+# """
+# mse_decipher(code)
+
+# -------------------------------
+
+def encrypt_phrase_lst(lst):
+	"""
+	encrypt a list of phrases
+	Attention the argument must be a list
+	"""
+	for element in lst:
+		print(mse_cipher(element),'\n')
+
+# -------------------------------
+
+def hash_password(password):
+	return mse_cipher(password)
+
+# -------------------------------
 
 print('Encrypted text:\n')
 message = mse_cipher('meeting tonight for speak')
@@ -45,8 +66,6 @@ print(message,'\n\n')
 
 print('Text decryption:\n')
 print(mse_decipher(message))
-
-
 
 
 
