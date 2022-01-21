@@ -8,6 +8,8 @@ Created on Tue Jan 22 10:51:19 2019
 
 @author: FLOW LORD
 
+twitter: https://twitter.com/flowlord_
+
 """
 
 from MSE import mse_cipher,mse_decipher,check_char,check_word
@@ -66,6 +68,4 @@ print(message,'\n\n')
 
 print('Text decryption:\n')
 print(mse_decipher(message))
-
-
 
