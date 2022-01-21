@@ -10,6 +10,10 @@ Created on Tue Jan 22 10:51:19 2019
 
 twitter: https://twitter.com/flowlord_
 
+see demo: https://youtu.be/81vH2tkX6cs
+		  https://youtu.be/RRgbowrAQ0g
+
+website: https://solarissoftwarebulares.fun/
 """
 
 from MSE import mse_cipher,mse_decipher,check_char,check_word
