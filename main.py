@@ -49,7 +49,7 @@ example_sentences = ['meeting tonight for speak','hello world','see you at night
 
 # -------------------------------
 
-def encrypt_phrase_lst(lst):
+def encrypt_sentence_lst(lst):
 	"""
 	encrypt a list of phrases
 	Attention the argument must be a list
