@@ -16,10 +16,10 @@ see demo: https://youtu.be/81vH2tkX6cs
 website: https://solarissoftwarebulares.fun/
 """
 
-from MSE import mse_cipher,mse_decipher,check_char,check_word
+from MSE import mse_cipher,mse_decipher,check_char,check_word,randint
 
 
-example_sentence = ['meeting tonight for speak','hello world','see you at night','where do you live',
+example_sentences = ['meeting tonight for speak','hello world','see you at night','where do you live',
 			'What do you do','see you soon','see you next week','see you on monday',
 			'see you tomorrow','have a good weekend','i will do that later',
 			'i can talk to you','we can see each other','im afraid im busy then',
@@ -44,9 +44,7 @@ example_sentence = ['meeting tonight for speak','hello world','see you at night'
 # -------------------------------
 
 # to decipher a code
-# code = """
-# PAST YOUR SECRET CODE HERE
-# """
+# code = "PAST YOUR SECRET CODE HERE"
 # mse_decipher(code)
 
 # -------------------------------
@@ -57,12 +55,43 @@ def encrypt_phrase_lst(lst):
 	Attention the argument must be a list
 	"""
 	for element in lst:
-		print(mse_cipher(element),'\n')
+		return mse_cipher(element)
 
 # -------------------------------
 
 def hash_password(password):
 	return mse_cipher(password)
+
+# -------------------------------
+
+def encrypt_save_file(lst):
+	"""
+	Encrypt many sentence and save on text file
+	encrypt_save_file(["hello world","this is text"])
+	"""
+	filename = str(randint(20,10000))+'$.txt'
+	file = open(filename,'w',encoding="utf-8")
+
+	for sentence in lst:
+		file.write(mse_cipher(sentence))
+		file.write('\n')
+	file.close()
+	print(filename)
+
+
+def decrypt_text_file(filename):
+	"""
+	decrypt coded sentences from text file name
+	"""
+	sentences = open(filename,'r',encoding="utf-8").readlines()
+
+	for sentence in sentences:
+		if sentence != "\n":
+			print(mse_decipher(sentence))
+
+
+#encrypt_save_file(example_sentences)
+#decrypt_text_file(filename)
 
 # -------------------------------
 

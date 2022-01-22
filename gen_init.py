@@ -23,8 +23,15 @@ space = ' '
 charac_sub = list(ascii_lowercase+space)
 nbr_letter_sub = len(charac_sub)
 
+# WARNING
+# if you want put your encrypted message in a text file,
+# you must replace normal to nounicode in line 33 !
+# and regenerate encryption keys
 
-initpat = open('initpat.txt','r',encoding='utf-8').readlines()
+normal = "initpat.txt"
+nounicode = "initpat (no unicode version).txt"
+
+initpat = open(normal,'r',encoding='utf-8').readlines()
 initpat = "".join(initpat)
 
 m = int(len(initpat)/2)
@@ -41,8 +48,6 @@ group_b = group_b+letteres
 
 word_lst = open('word_lst.txt','r').readlines()
 word_lst = [x.replace('\n','') for x in word_lst]
-
-
 
 
 

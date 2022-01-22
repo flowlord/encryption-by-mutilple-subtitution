@@ -3,11 +3,12 @@
 # KEY GENERATOR
 # Encryption key generator with the characters of group a
 
+
 from random import randint,choice
 from gen_init import*
 
 
-keyNumber = 300
+keyNumber = 500
 
 
 def getRandCharac(x):
@@ -81,4 +82,8 @@ def gen_file():
 for generate new encryption keys or overwrite the previous encryption keys to generate new ones
 """
 #gen_file()
+
+
+
+
 
