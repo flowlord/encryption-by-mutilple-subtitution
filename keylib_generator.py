@@ -8,9 +8,6 @@ from random import randint,choice
 from gen_init import*
 
 
-keyNumber = 500
-
-
 def getRandCharac(x):
     """
     Get random character in group_a x times.
@@ -44,7 +41,7 @@ def keygen(nbr_letter_sub):
     return '['+key[:-1]+']'
 
 
-def gen_listkey():
+def gen_listkey(keyNumber):
     listkey = []
     for i in range(1,keyNumber+1):
         listkey = listkey + [f'KEY{str(i)}']
@@ -53,7 +50,7 @@ def gen_listkey():
     return listkey
 
 
-def gen_file():
+def gen_file(keyNumber):
     """
     Generate encryption keys in a python file
     """
@@ -69,7 +66,7 @@ def gen_file():
         slach = slach+'▨'
         file.write(f'KEY{number} = {keygen(nbr_letter_sub)}\n')
     
-    file.write(f'listkey = {gen_listkey()}\n\n')
+    file.write(f'listkey = {gen_listkey(keyNumber)}\n\n')
 
     file.write('def getRandomKey():\n')
     file.write('\treturn choice(listkey)')
@@ -82,8 +79,5 @@ def gen_file():
 for generate new encryption keys or overwrite the previous encryption keys to generate new ones
 """
 #gen_file()
-
-
-
 
 
