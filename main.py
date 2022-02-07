@@ -64,11 +64,11 @@ def hash_password(password):
 
 # -------------------------------
 
-# print('Encrypted text:\n')
-# message = mse_cipher('meeting tonight for speak')
-# print(message,'\n\n')
+print('Encrypted text:\n')
+message = mse_cipher('meeting tonight for speak')
+print(message,'\n\n')
 
-# print('Text decryption:\n')
-# print(mse_decipher(message))
+print('Text decryption:\n')
+print(mse_decipher(message))
 
 

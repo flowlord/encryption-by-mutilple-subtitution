@@ -49,7 +49,7 @@ def mixer(x,filename):
 	"""
 	mix the order of characters
 	example:
-		AAAZZZ ---> | mixer(2) | ---> ZAAZAZ
+		AAAZZZ ---> | mixer(x) | ---> ZAAZAZ
 	"""
 
 	init = open(filename,'r',encoding='utf-8').readlines()
