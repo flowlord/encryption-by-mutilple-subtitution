@@ -64,41 +64,11 @@ def hash_password(password):
 
 # -------------------------------
 
-def encrypt_save_file(lst):
-	"""
-	Encrypt many sentence and save on text file
-	encrypt_save_file(["hello world","this is text"])
-	"""
-	filename = str(randint(20,10000))+'$.txt'
-	file = open(filename,'w',encoding="utf-8")
+# print('Encrypted text:\n')
+# message = mse_cipher('meeting tonight for speak')
+# print(message,'\n\n')
 
-	for sentence in lst:
-		file.write(mse_cipher(sentence))
-		file.write('\n')
-	file.close()
-	print(filename)
+# print('Text decryption:\n')
+# print(mse_decipher(message))
 
-
-def decrypt_text_file(filename):
-	"""
-	decrypt coded sentences from text file name
-	"""
-	sentences = open(filename,'r',encoding="utf-8").readlines()
-
-	for sentence in sentences:
-		if sentence != "\n":
-			print(mse_decipher(sentence))
-
-
-#encrypt_save_file(example_sentences)
-#decrypt_text_file(filename)
-
-# -------------------------------
-
-print('Encrypted text:\n')
-message = mse_cipher('meeting tonight for speak')
-print(message,'\n\n')
-
-print('Text decryption:\n')
-print(mse_decipher(message))
 
