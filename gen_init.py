@@ -25,7 +25,7 @@ nbr_letter_sub = len(charac_sub)
 
 # WARNING
 # if you want put your encrypted message in a text file,
-# you must replace normal to nounicode in line 33 !
+# you must replace normal to nounicode in line 34 !
 # and regenerate encryption keys
 
 normal = "initpat.txt"
