@@ -19,11 +19,13 @@ website: https://solarissoftwarebulares.fun/
 from MSE import mse_cipher,mse_decipher,check_char,check_word,randint
 
 
-example_sentences = ['meeting tonight for speak','hello world','see you at night','where do you live',
-			'What do you do','see you soon','see you next week','see you on monday',
+example_sentences = ['i have a correspondence','meeting tonight for speak','hello world','see you at night','where do you live',
+			'what do you do','see you soon','see you next week','see you on monday',
 			'see you tomorrow','have a good weekend','i will do that later',
 			'i can talk to you','we can see each other','im afraid im busy then',
-            'you can help me do my homework','they are there','so far so good']
+            'you can help me do my homework','they are there','so far so good','do you happen to know',
+            'have you got an idea of','i dont suppose you know','could anyone tell me','im interested in','i was wondering',
+            'can i have  please','is this right way for ','would you mind','im looking for','id like to know','do you know']
 
 
 # Encryption with verification
