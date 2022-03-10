@@ -12,7 +12,7 @@ Created on Tue Jan 22 10:51:19 2019
 
 from MSE import mse_cipher,mse_decipher
 
-message = 'meeting tonight for speak'
+message = 'hello world'
 
 message = mse_cipher(message)
 print(message,'\n\n')

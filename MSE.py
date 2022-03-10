@@ -16,8 +16,14 @@ III) Block C
 
 
 from pyperclip import copy
-from keylib_generator import randint,group_b, nbr_letter_sub, charac_sub,word_lst,choice
-from keylib import listkey,getRandomKey
+from keylib_generator import randint,GB, nbr_letter_sub, charac_sub,word_lst,choice
+
+try:
+    from keylib import listkey,getRandomKey
+except ModuleNotFoundError:
+    from keylib_generator import gen_file
+    gen_file(randint(10,50))
+    from keylib import listkey,getRandomKey
 
 
 def revlst(key):
@@ -220,7 +226,7 @@ class Block_B():
         """
         new_text = ""
         for element in code:
-            if element not in group_b:
+            if element not in GB:
                 new_text = new_text + element  
         return new_text
 
@@ -240,12 +246,12 @@ class Block_B():
     def decipher(coded_msg):
         original_code = coded_msg
         
-        
         for key in listkey:
             for element in range(nbr_letter_sub):
                 coded_msg = coded_msg.replace(key[element][1],charac_sub[element])
         
         coded_msg = Block_A.decomplex(coded_msg)
+
         
         if check_word(coded_msg) is False:
             return Block_B.decipher_basic_reverse(original_code)
@@ -255,13 +261,13 @@ class Block_B():
 class Block_C():
     
     def chaos(plain_text,x):
-        """Add randomly characters from group_b to plain_text
+        """Add randomly characters from GB to plain_text
           in a randomly chosen position, x times.
         """
         plain_text = list(plain_text)
         
         for _ in range(x):
-            getRandCharac = choice(group_b)
+            getRandCharac = choice(GB)
             pos = randint(0,len(plain_text))
             
             plain_text.insert(pos, getRandCharac)
@@ -275,7 +281,7 @@ def mse_cipher(msg):
     
     coded = Block_B.cipher(coded)
     
-    coded = Block_C.chaos(coded,randint(100,1000))
+    coded = Block_C.chaos(coded,randint(100,500))
     
     return coded
 
