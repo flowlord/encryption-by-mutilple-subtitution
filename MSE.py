@@ -16,13 +16,16 @@ III) Block C
 
 
 from pyperclip import copy
-from keylib_generator import randint,GB, nbr_letter_sub, charac_sub,word_lst,choice
+from gen_init import*
+from random import randint,choice
+import shutil
+
 
 try:
     from keylib import listkey,getRandomKey
 except ModuleNotFoundError:
     from keylib_generator import gen_file
-    gen_file(randint(10,50))
+    gen_file(randint(100,1500))
     from keylib import listkey,getRandomKey
 
 
@@ -43,8 +46,9 @@ def revlst(key):
 
 def check_word(text):
     """
-    
+    Check if a word is in the word list
     """
+
     text = text.split(' ')
 
     v = []
@@ -63,8 +67,8 @@ def check_word(text):
 
 def check_char(msg):
     """
-    return True si il a un caractère
-    qui n'est pas dans la list charac_sub'
+    return True if he has a character
+    which is not in the charac_sub list
     
     """
     msg = list(msg)
@@ -78,10 +82,10 @@ def check_char(msg):
     return 0 in v
 
 
+def get_len(char):
+    return int(len(char)/2)
 
 class Block_A():
-    
-    #------------------------------------------------------------------------------
 
     def rev(plain_text):
         """
@@ -176,8 +180,6 @@ class Block_A():
         return msg[:-1]
 
 
-#----------------------------------------------------------------------
-    
     def complicate(plain_text):
         """ complicates the raw text
             example:
@@ -199,7 +201,11 @@ class Block_A():
 
 
 class Block_B():
-    """docstring for Block_B"""
+    """
+    II) Block B
+        Each character of the message is substituted by a group
+        of randomly generated characters.
+    """
 
     def cipher(plain_text):
         plain_text = plain_text.lower()
@@ -219,6 +225,7 @@ class Block_B():
         copy(plain_text)
         return plain_text
     
+
     def deconfuse(code):
         """
         create a new character string without the 
@@ -226,7 +233,7 @@ class Block_B():
         """
         new_text = ""
         for element in code:
-            if element not in GB:
+            if element not in group_b:
                 new_text = new_text + element  
         return new_text
 
@@ -246,28 +253,45 @@ class Block_B():
     def decipher(coded_msg):
         original_code = coded_msg
         
+        
         for key in listkey:
             for element in range(nbr_letter_sub):
                 coded_msg = coded_msg.replace(key[element][1],charac_sub[element])
         
         coded_msg = Block_A.decomplex(coded_msg)
-
         
         if check_word(coded_msg) is False:
             return Block_B.decipher_basic_reverse(original_code)
         else:
             return coded_msg
 
+
 class Block_C():
+
+    def blop64(coded_msg):
+        """
+        Example:
+            XXXOOOO --> odd length --> XXXOOOO + P --> OOOPXXXO
+            XXXOOO --> even length --> OOOXXX
+        """
+
+        if get_len(coded_msg)%2 == 1:
+            coded_msg = coded_msg + choice(group_b)
+
+        a = coded_msg[:get_len(coded_msg)]
+        b = coded_msg[get_len(coded_msg):]
+
+        return b+a
     
+
     def chaos(plain_text,x):
-        """Add randomly characters from GB to plain_text
+        """Add randomly characters from group_b to plain_text
           in a randomly chosen position, x times.
         """
         plain_text = list(plain_text)
         
         for _ in range(x):
-            getRandCharac = choice(GB)
+            getRandCharac = choice(group_b)
             pos = randint(0,len(plain_text))
             
             plain_text.insert(pos, getRandCharac)
@@ -278,18 +302,17 @@ class Block_C():
 
 def mse_cipher(msg):
     coded  = Block_A.complicate(msg)
-    
     coded = Block_B.cipher(coded)
-    
-    coded = Block_C.chaos(coded,randint(100,500))
+    coded = Block_C.chaos(coded,randint(900,1500))
+    coded = Block_C.blop64(coded)
     
     return coded
 
 
-def mse_decipher(coded):
-    msg = Block_B.deconfuse(coded)
+def mse_decipher(coded_msg):
+    msg = Block_C.blop64(coded_msg)
+    msg = Block_B.deconfuse(msg)
     msg = Block_B.decipher(msg)
     
     return msg
-
 

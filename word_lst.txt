@@ -5,7 +5,6 @@ andorra
 angola
 antigua and deps
 argentina
-Karim
 armenia
 australia
 austria
@@ -38,7 +37,7 @@ china
 colombia
 comoros
 congo
-congo {democratic rep}
+congo democratic rep
 costa rica
 croatia
 cuba
@@ -78,7 +77,7 @@ india
 indonesia
 iran
 iraq
-ireland {republic}
+ireland republic
 israel
 italy
 ivory coast
@@ -120,7 +119,7 @@ mongolia
 montenegro
 morocco
 mozambique
-myanmar, {burma}
+myanmar burma
 namibia
 nauru
 nepal

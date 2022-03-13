@@ -1,40 +1,44 @@
 #!/usr/bin/env python
 # coding: utf-8
 # KEY GENERATOR
-# Encryption key generator with
-# the characters of group a
+# Encryption key generator with the characters of group a
+
 
 from random import randint,choice
-from get_init import*
+from gen_init import*
 
 
 def getRandCharac(x):
     """
-    Get random character in GA x times.
+    Get random character in group_a x times.
     like password generator
     """
     charac = ''
     for e in range(x):
-        charac = charac+choice(GA)
+        charac = charac+choice(group_a)
     return charac
 
 
 def keygen(nbr_letter_sub):
     """
+    Generates a key according to the length chosen
 
+    Example:
+        KEYX = [('a','⥰Ꮖᣧ㎮⥚⻗ጟⲢ'), ('b','𐊐Ϳקּ࢛'), ('c','ڠᖪᴼૄȪ'), ('d','ᑮﺎ'), ('e','Ȱ╻') ... ]
     """
+
     key = ''
 
     for charac in range(nbr_letter_sub):
-        letter_lenght = randint(4,10)
+        letter_lenght = randint(10,20)
         freq_letter_lenght = randint(2,3)
         
         if charac_sub[charac] in freq_letter:
-            key = key + f"('{charac_sub[charac]}','{getRandCharac(freq_letter_lenght)}'), "
+            key = key + f"('{charac_sub[charac]}','{getRandCharac(freq_letter_lenght)}'),"
         else:
-            key = key + f"('{charac_sub[charac]}','{getRandCharac(letter_lenght)}'), "
+            key = key + f"('{charac_sub[charac]}','{getRandCharac(letter_lenght)}'),"
 
-    return '['+key[:-2]+']'
+    return '['+key[:-1]+']'
 
 
 def gen_listkey(keyNumber):
@@ -47,6 +51,9 @@ def gen_listkey(keyNumber):
 
 
 def gen_file(keyNumber):
+    """
+    Generate encryption keys in a python file
+    """
     file = open('keylib.py','w',encoding='utf-8')
     print('[ Generating and writing key ... ]\n')
     slach = '▨'
@@ -66,4 +73,7 @@ def gen_file(keyNumber):
     file.close()
 
     print('keylib.py Generated')
+
+
+
 
