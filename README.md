@@ -59,11 +59,11 @@ personal with this method !!
 the code is not perfect and some function
 is not explained a next update will fix all its
 
-the wonderful world of secrets, letters,
-numbers and letters.
+remember to mix the init pat.txt file using the mixer function in tools in this case delete the __pycache__ folder and regenerate your keys
 
 -----------------------------------
-Have fun you ;)
+the wonderful world of secrets, letters,
+numbers and letters.
 
 
 
