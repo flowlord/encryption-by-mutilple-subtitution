@@ -30,7 +30,7 @@ example_sentences = ['meeting tonight for speak','hello world','see you at night
 
 
 print('Encrypted text:\n')
-message = mse_cipher('hello world')
+message = mse_cipher('meeting tonight for speak')
 print(message,'\n\n')
 
 print('Text decryption:\n')

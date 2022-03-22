@@ -25,10 +25,10 @@ GB = initpat[m:]
 # e,s,d,n,t,r,y,o et l'espace.
 freq_letter = 'esdntryo'+space
 
+# Add letters in group b
+letteres = ''.join(charac_sub)*350+freq_letter*800
+group_b = group_b+letteres
+
 # authorized word list for encryption
 word_lst = open('word_lst.txt','r').readlines()
 word_lst = [x.replace('\n','') for x in word_lst]
-
-
-
-
