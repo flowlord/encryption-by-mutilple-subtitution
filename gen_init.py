@@ -40,7 +40,7 @@ group_b = initpat[m:]
 freq_letter = 'esdntryo'+'yzxca'+space
 
 # Add letters in group b
-letteres = ''.join(charac_sub)*150+freq_letter*800
+letteres = ''.join(charac_sub)*450+freq_letter*800
 group_b = group_b+letteres
 
 word_lst = open('word_lst.txt','r').readlines()
