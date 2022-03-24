@@ -4,6 +4,11 @@ MSE PROJECT
 ENCRYPTION BY MUTILPLE SUBTITUTION
 ---------------------------------------
 
+the keylib.py file are you's encryption key! You must keep them secret at all costs! it is generated when you encrypt your first message
+---------------------------------------
+If you delete it, all the messages you encrypted before are no longer decipherable! (like bitcoins that you lost forever)
+---------------------------------------
+
 REQUIRED 
 -------------------------------------
 [ for copy automatically coded message ]
