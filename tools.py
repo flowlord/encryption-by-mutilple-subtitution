@@ -5,17 +5,6 @@ from os import makedirs
 from random import shuffle
 
 
-def get_pattern_len(file_name):
-	"""
-	Get number of character
-	get_pattern_len("initpat.txt")
-	get_pattern_len("initpat (no unicode version).txt")
-
-	"""
-	f = "".join(open(file_name,"r",encoding="utf-8").readlines())
-	print(len(f))
-
-
 def gen_many_keylib(x,keyNumber):
 	
 	print('[ Generating and writing keylib ... ]\n')
@@ -65,7 +54,6 @@ def mixer():
 	f.close()
 
 
-mixer()
 #gen_many_keylib(x,x)
 #get_pattern_len(file_name)
 

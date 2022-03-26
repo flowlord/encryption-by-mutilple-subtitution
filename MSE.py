@@ -1,39 +1,38 @@
 # -*- coding: utf-8 -*-
 """
+    INPUT --> A --> B --> C --> output
 
-I) Block A
-    the messages are slightly modified by functions.
+    I) Bloc A
+        Le text est légèrement modifier.
 
-II) Block B
-    Each character of the message is substituted by a group
-    of randomly generated characters.
+    II) Bloc B
+        Chaque carcatère est subtitué.
 
-III) Block C
-    characters of group b are chosen randomly
-    and are added to the already encoded message.
+    II) Bloc C
+        Complexifie le code après la subtitution.
+
+le module pyperclip est nécessaire pour que les
+messages codés sois copier automatiquement
+
+pip install pyperclip
 
 """
 
 
 from pyperclip import copy
-from gen_init import*
+from parametre import*
 from random import randint,choice
-import shutil
-
 
 try:
     from keylib import listkey,getRandomKey
 except ModuleNotFoundError:
-    from keylib_generator import gen_file
-    gen_file(randint(100,1500))
+    from keylib_generator import gen_lib_cle
+    gen_lib_cle(randint(nombre_cle[0],nombre_cle[1]))
     from keylib import listkey,getRandomKey
 
 
-def revlst(key):
+def inverser_liste(key):
     """
-    Reverses the elements of a list (here an encryption key)
-    so the last item in the list will be the first.
-    
     KEYX = ['a','b','c'] ---> KEYX = ['c', 'b', 'a']
     
     """
@@ -46,7 +45,7 @@ def revlst(key):
 
 def check_word(text):
     """
-    Check if a word is in the word list
+    vérifie si un mot est dans la list de mot
     """
 
     text = text.split(' ')
@@ -54,7 +53,7 @@ def check_word(text):
     v = []
 
     for element in text:
-        if element in word_lst:
+        if element in liste_mots:
             v = v + [0]
         else:
             v = v + [1]
@@ -67,8 +66,7 @@ def check_word(text):
 
 def check_char(msg):
     """
-    return True if he has a character
-    which is not in the charac_sub list
+    vérifie si un caratère est dans la variable caractere_sub
     
     """
     msg = list(msg)
@@ -85,11 +83,11 @@ def check_char(msg):
 def get_len(char):
     return int(len(char)/2)
 
-class Block_A():
+class Bloc_A():
 
-    def rev(plain_text):
+    def inverser_text(plain_text):
         """
-        Reverse the raw text.
+        Inverse le text.
         """
         new_text = ''
         for element in reversed(plain_text):
@@ -145,9 +143,9 @@ class Block_A():
         if n == 1:
             return word
         elif n%2 == 0:
-            return Block_A.a(word)
+            return Bloc_A.a(word)
         else:
-            return Block_A.b(word)
+            return Bloc_A.b(word)
 
 
     def d(word):
@@ -156,16 +154,16 @@ class Block_A():
         if n == 1:
             return word
         elif n%2 == 0:
-            return Block_A.a1(word)
+            return Bloc_A.a1(word)
         else:
-            return Block_A.b1(word)
+            return Bloc_A.b1(word)
 
     def sub_sentence(msg):
         msg = msg.split(' ')
         code = ''
         
         for word in msg:
-            code = code + Block_A.c(word) + ' '
+            code = code + Bloc_A.c(word) + ' '
         
         return code[:-1]
 
@@ -175,32 +173,34 @@ class Block_A():
         msg = ''
         
         for word in code:
-            msg = msg + Block_A.d(word) + ' '
+            msg = msg + Bloc_A.d(word) + ' '
         
         return msg[:-1]
 
 
-    def complicate(plain_text):
-        """ complicates the raw text
+    def complex(plain_text):
+        """ 
+            Modifie légèrement le text
             example:
                 hello word ---> rowdl lehol
         """
-        plain_text =  Block_A.rev(plain_text)
-        plain_text = Block_A.sub_sentence(plain_text)
+        plain_text =  Bloc_A.inverser_text(plain_text)
+        plain_text = Bloc_A.sub_sentence(plain_text)
         return plain_text
 
 
     def decomplex(plain_text):
-        """ inverse function of complicate
+        """ 
+            Remet le text dans me bon sens
             example:
                 rowdl lehol ---> hello world
         """
-        plain_text = Block_A.desub_sentence(plain_text)
-        plain_text =  Block_A.rev(plain_text)
+        plain_text = Bloc_A.desub_sentence(plain_text)
+        plain_text =  Bloc_A.inverser_text(plain_text)
         return plain_text
 
 
-class Block_B():
+class Bloc_B():
     """
     II) Block B
         Each character of the message is substituted by a group
@@ -208,6 +208,9 @@ class Block_B():
     """
 
     def cipher(plain_text):
+        """
+        Je prend une clé au hazard et subtitue les caractères
+        """
         plain_text = plain_text.lower()
         
         reversed_key = choice([True,False])
@@ -215,12 +218,12 @@ class Block_B():
         key = getRandomKey()
         
         if reversed_key is True:
-            key = revlst(key)
+            key = inverser_liste(key)
         
-        for letter in range(nbr_letter_sub):
-            plain_text = plain_text.replace(charac_sub[letter],key[letter][1])
+        for letter in range(nbr_lettre_sub):
+            plain_text = plain_text.replace(caractere_sub[letter],key[letter][1])
             
-        del key    
+        del key
         
         copy(plain_text)
         return plain_text
@@ -228,55 +231,60 @@ class Block_B():
 
     def deconfuse(code):
         """
-        create a new character string without the 
-        characters that are in anti_pat
+        Enlève les carcatères du groupe b
         """
         new_text = ""
         for element in code:
-            if element not in group_b:
+            if element not in groupe_b:
                 new_text = new_text + element  
         return new_text
 
 
     def decipher_basic_reverse(coded_msg):
+        """
+        Déchiffre le message avec une clé inverser
+        """
 
         for key in listkey:
-            key = revlst(key)
-            for element in range(nbr_letter_sub):
-                coded_msg = coded_msg.replace(key[element][1],charac_sub[element])
+            key = inverser_liste(key)
+            for element in range(nbr_lettre_sub):
+                coded_msg = coded_msg.replace(key[element][1],caractere_sub[element])
         
-        coded_msg = Block_A.decomplex(coded_msg)
+        coded_msg = Bloc_A.decomplex(coded_msg)
         
         return coded_msg
 
 
     def decipher(coded_msg):
+        """
+        Essaie déchiffrer le message
+        """
+
         original_code = coded_msg
         
-        
         for key in listkey:
-            for element in range(nbr_letter_sub):
-                coded_msg = coded_msg.replace(key[element][1],charac_sub[element])
+            for element in range(nbr_lettre_sub):
+                coded_msg = coded_msg.replace(key[element][1],caractere_sub[element])
         
-        coded_msg = Block_A.decomplex(coded_msg)
+        coded_msg = Bloc_A.decomplex(coded_msg)
         
         if check_word(coded_msg) is False:
-            return Block_B.decipher_basic_reverse(original_code)
+            return Bloc_B.decipher_basic_reverse(original_code)
         else:
             return coded_msg
 
 
-class Block_C():
+class Bloc_C():
 
     def blop64(coded_msg):
         """
         Example:
-            XXXOOOO --> odd length --> XXXOOOO + P --> OOOPXXXO
-            XXXOOO --> even length --> OOOXXX
+            XXXOOOO --> imapair --> XXXOOOO + P --> OOOPXXXO
+            XXXOOO --> pair --> OOOXXX
         """
 
         if get_len(coded_msg)%2 == 1:
-            coded_msg = coded_msg + choice(group_b)
+            coded_msg = coded_msg + choice(groupe_b)
 
         a = coded_msg[:get_len(coded_msg)]
         b = coded_msg[get_len(coded_msg):]
@@ -285,13 +293,14 @@ class Block_C():
     
 
     def chaos(plain_text,x):
-        """Add randomly characters from group_b to plain_text
-          in a randomly chosen position, x times.
+        """
+            Ajoute de manière aléatoire un caractère du groupe_b
+            dans le code dans une position au hazard x fois.
         """
         plain_text = list(plain_text)
         
         for _ in range(x):
-            getRandCharac = choice(group_b)
+            getRandCharac = choice(groupe_b)
             pos = randint(0,len(plain_text))
             
             plain_text.insert(pos, getRandCharac)
@@ -301,18 +310,20 @@ class Block_C():
 
 
 def mse_cipher(msg):
-    coded  = Block_A.complicate(msg)
-    coded = Block_B.cipher(coded)
-    coded = Block_C.chaos(coded,randint(900,1500))
-    coded = Block_C.blop64(coded)
+    coded  = Bloc_A.complex(msg)
+    coded = Bloc_B.cipher(coded)
+    coded = Bloc_C.chaos(coded,randint(fa,fb))
+    coded = Bloc_C.blop64(coded)
     
     return coded
 
 
 def mse_decipher(coded_msg):
-    msg = Block_C.blop64(coded_msg)
-    msg = Block_B.deconfuse(msg)
-    msg = Block_B.decipher(msg)
+    msg = Bloc_C.blop64(coded_msg)
+    msg = Bloc_B.deconfuse(msg)
+    msg = Bloc_B.decipher(msg)
     
     return msg
+
+
 
