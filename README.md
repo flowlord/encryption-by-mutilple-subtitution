@@ -14,11 +14,9 @@ pip install pyperclip
 -------------------------------------
 
 le fichier keylib.py sont vous clés de chiffrement, gardez les à tous prix !
--------------------------------------
 Elle est générer lorsque vous chiffrer votre premier message
--------------------------------------
 Ne tantez pas d'ouvrir le fichier keylib.py ou initpat.txt, cela risque de faire bugger votre IDE
--------------------------------------
+
 pour regénérer vos clé de chiffrement suprimmer le fichier keylib.py
 
 -------------------------------------
@@ -62,6 +60,6 @@ le monde merveilleux des secrets, des lettres,
 chiffres et lettres.
 
 
-
+![demo file](demo/demo.jpg)
 
 

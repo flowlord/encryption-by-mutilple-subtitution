@@ -31,6 +31,6 @@ print('Text chiffré:\n')
 message = mse_cipher('meeting tonight for speak')
 print(message,'\n\n')
 
-print('Text decryption:\n')
+print('Text déchiffré:\n')
 print(mse_decipher(message))
 
