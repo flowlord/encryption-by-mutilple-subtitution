@@ -84,6 +84,10 @@ def get_len(char):
     return int(len(char)/2)
 
 class Bloc_A():
+    """
+        I) Bloc A
+        Le text est légèrement modifier.
+    """
 
     def inverser_text(plain_text):
         """
@@ -202,9 +206,8 @@ class Bloc_A():
 
 class Bloc_B():
     """
-    II) Block B
-        Each character of the message is substituted by a group
-        of randomly generated characters.
+        II) Bloc B
+            Chaque carcatère est subtitué.
     """
 
     def cipher(plain_text):
@@ -275,6 +278,11 @@ class Bloc_B():
 
 
 class Bloc_C():
+
+    """
+        II) Bloc C
+            Complexifie le code après la subtitution.
+    """
 
     def blop64(coded_msg):
         """
