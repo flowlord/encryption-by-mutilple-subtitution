@@ -37,8 +37,8 @@ def inverser_liste(key):
     
     """
     new_list = []
-    for elment in reversed(key):
-        new_list = new_list+[elment]
+    for element in reversed(key):
+        new_list = new_list+[element]
         
     return new_list
 
