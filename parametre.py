@@ -40,18 +40,19 @@ groupe_b = groupe_caracteres_initial[mileu:]
 
 
 # IV)
-lettre_special = 'esdntryoyzxca'+espace
+lettre_special = 'esdntryozxca'+espace
 
-groupe_b = groupe_b+''.join(caractere_sub)*450+lettre_special*500
+groupe_b = groupe_b+''.join(caractere_sub)*150+lettre_special*200
 
-longeur_caractere = (10,20)
-longeur_lettre_special = (3,5)
+longeur_caractere = (6,8)
+longeur_lettre_special = (2,5)
 
-nombre_cle = (100,500)
+nombre_cle = (10,100)
 
 # fa et fb détermine le minimume et maximume
 # de nombre de caractère qui peuvent être ajouté
-fa,fb = (900,1500)
+# ( on a pas trouvé de limite :) )
+fa,fb = (100,500)
 
 liste_mots = open('word_lst.txt','r').readlines()
 liste_mots = [x.replace('\n','') for x in liste_mots]

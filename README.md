@@ -1,42 +1,62 @@
 ![logo file](logo.jpg)
 
-MSE PROJECT
+# MSE PROJECT
 -------------------------------------
 
-ENCRYPTION BY MUTILPLE SUBTITUTION
+# ENCRYPTION BY MUTILPLE SUBTITUTION
+-------------------------------------
+Chiffrement par subtitution multiple
+
+projet sur un programme de chiffrement par subtitution multiple,
+pour but de créer des messages courts codés.
+
+pratique pour:
+    créer des énigmes complexes
+    hacher un mot de passe
+    **aprendre la cryptographie et cryptanalyse !**
+
+pas pratique pour:
+    **sécurisé ces données**
+
+**Normalement il faut avoir les clés de chiffrement pour pouvoir déchiffrer les messages de quelqu'un d'autre, normalement ! (Tentez de décoder les messages sans le programme !)**
+
+**Attention si vous perdez vous clés, tous les messages que vous avez chiffrées avant seront plus possible à déchiffrer (comme si vous perdez vous bitcoin à jamais !**
+
+Tous est facilement paramétrable dans le fichier [parametre.py](https://github.com/flowlord/encryption-by-mutilple-subtitution/blob/main/parametre.py)
 ---------------------------------------
 
-REQUIS
+# REQUIS !
 -------------------------------------
-[ Pour copier le code automatiquement ]
+Pour copier le code automatiquement vous devez installez le module [pyperclip](https://pypi.org/project/pyperclip/)
 
-pip install pyperclip
+> pip install pyperclip
 -------------------------------------
 
-le fichier keylib.py sont vous clés de chiffrement, gardez les à tous prix !
+**le fichier keylib.py sont vous clés de chiffrement, gardez les secret à tous prix !**
 Elle est générer lorsque vous chiffrer votre premier message
-Ne tantez pas d'ouvrir le fichier keylib.py ou initpat.txt, cela risque de faire bugger votre IDE
+**Ne tantez pas d'ouvrir le fichier keylib.py ou initpat.txt, cela risque de faire bugger votre IDE**
 
-pour regénérer vos clé de chiffrement suprimmer le fichier keylib.py
+pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 
 -------------------------------------
 
     INPUT --> A --> B --> C --> output
 --------------------------------------------------------------------------
     I) Bloc A
-        Le text est légèrement modifier.
+        Le texte est légèrement modifié.
 --------------------------------------------------------------------------
     II) Bloc B
-        Chaque carcatère est subtitué.
+        Chaque caractère est substitué.
 --------------------------------------------------------------------------
     II) Bloc C
-        Complexifie le code après la subtitution.
+        Complexifie le code après la substitution.
 
-
-Astuces
+# Attention
 ---------------------------
-Pratique pour chiffrer des phrases, créer des enigmes ou
-hacher un mot de passe
+Un bug inconnu fait que parfois le programme à du mal à déchiffrer le message
+
+# Astuces
+---------------------------
 
 modifier les caractères du fichier initpat.txt
 Mettez ce que vous voulez sauf les caractères
@@ -49,15 +69,14 @@ mot de votre langue ou inventez des mots.
 
 modifier la liste des lettres spéciaux
 
-Malgré que notre équipe n'ont toujours pas trouver de faille
 Cette méthode de chiffrement reste vulnérable
 aux attaques, ne chriffrer pas vos données personel avec cette méthode !!
 
-pensez à mélanger le fichier initpat.txt à l'aide de la fonction mixeur dans les outils dans ce cas supprimez le dossier __pycache__ et régénérez vos clés
+pensez à mélanger les caractères du fichier initpat.txt à l'aide de la fonction mixeur.
 
 -----------------------------------
-le monde merveilleux des secrets, des lettres,
-chiffres et lettres.
+le monde merveilleux des secrets, des lettres et des
+chiffres.
 
 
 ![demo file](demo/demo.jpg)

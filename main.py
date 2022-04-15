@@ -27,6 +27,7 @@ from MSE import mse_cipher,mse_decipher,check_char,check_word,randint
 example_sentences = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
 			'que faites vous','a bientot','à la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien']
 
+
 print('Text chiffré:\n')
 message = mse_cipher('meeting tonight for speak')
 print(message,'\n\n')

@@ -3,16 +3,16 @@
     INPUT --> A --> B --> C --> output
 
     I) Bloc A
-        Le text est légèrement modifier.
+        Le texte est légèrement modifié.
 
     II) Bloc B
-        Chaque carcatère est subtitué.
+        Chaque caractère est substitué.
 
     II) Bloc C
-        Complexifie le code après la subtitution.
+        Complexifie le code après la substitution.
 
 le module pyperclip est nécessaire pour que les
-messages codés sois copier automatiquement
+messages codés soient copiés automatiquement
 
 pip install pyperclip
 
@@ -74,7 +74,7 @@ def check_char(msg):
     v = []
     
     for ch in msg:
-        if ch not in charac_sub:
+        if ch not in caractere_sub:
             v = v + [0]
     
     return 0 in v
