@@ -63,7 +63,6 @@ def gen_lib_cle(keyNumber):
     """
     Génère une librairie de clé
     """
-    mixer()
 
     file = open('keylib.py','w',encoding='utf-8')
 
