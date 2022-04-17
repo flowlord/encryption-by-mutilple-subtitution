@@ -333,5 +333,17 @@ def mse_decipher(coded_msg):
     
     return msg
 
+def cycle(msg):
+    """
+    Renvoie un message quand peut déchiffrer
+    """
+    msg = mse_cipher(msg)
+    while check_char(mse_decipher(msg)) is True:
+        msg = mse_cipher(msg)
+
+    return msg
+
+
+
 
 

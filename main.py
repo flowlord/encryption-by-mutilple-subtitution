@@ -21,7 +21,7 @@ supprimer le dossier __pycache__ avant de regénèrer vos clés
 
 """
 
-from MSE import mse_cipher,mse_decipher,check_char,check_word,randint
+from MSE import cycle,mse_decipher,check_char,check_word,randint
 
 
 example_sentences = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
@@ -29,9 +29,11 @@ example_sentences = ['meeting tonight for speak','rendez vous ce soir pour parle
 
 
 print('Text chiffré:\n')
-message = mse_cipher('meeting tonight for speak')
+message = cycle('meeting tonight for speak')
 print(message,'\n\n')
 
 print('Texte déchiffré:\n')
 print(mse_decipher(message))
+
+
 
