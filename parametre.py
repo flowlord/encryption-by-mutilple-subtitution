@@ -51,10 +51,11 @@ nombre_cle = (10,100)
 
 # fa et fb détermine le minimume et maximume
 # de nombre de caractère qui peuvent être ajouté
-# ( on a pas trouvé de limite :) )
+# ( un nombre maximume élévé peut entrainer un bug d'affichage
+# de votre IDE et ralentir le programme !)
 fa,fb = (100,500)
 
+# Rajoutez des noms, prénom dans la list ! (sans accent ni majuscule)
 liste_mots = open('word_lst.txt','r').readlines()
 liste_mots = [x.replace('\n','') for x in liste_mots]
-
 

@@ -32,15 +32,8 @@ except ModuleNotFoundError:
 
 
 def inverser_liste(key):
-    """
-    KEYX = ['a','b','c'] ---> KEYX = ['c', 'b', 'a']
-    
-    """
-    new_list = []
-    for element in reversed(key):
-        new_list = new_list+[element]
-        
-    return new_list
+    key.reverse()
+    return key
 
 
 def check_word(text):
@@ -80,8 +73,13 @@ def check_char(msg):
     return 0 in v
 
 
-def get_len(char):
+def milieu(char):
+    """
+    abcd --> 4/2 ---> 2
+    """
     return int(len(char)/2)
+
+
 
 class Bloc_A():
     """
@@ -222,12 +220,10 @@ class Bloc_B():
         
         if reversed_key is True:
             key = inverser_liste(key)
-        
+
         for letter in range(nbr_lettre_sub):
             plain_text = plain_text.replace(caractere_sub[letter],key[letter][1])
             
-        del key
-        
         copy(plain_text)
         return plain_text
     
@@ -287,15 +283,15 @@ class Bloc_C():
     def blop64(coded_msg):
         """
         Example:
-            XXXOOOO --> imapair --> XXXOOOO + P --> OOOPXXXO
-            XXXOOO --> pair --> OOOXXX
+            hello world --> 11 caractères --> imapair --> hello world + caractère aléatoire du group B --> hello world@ --> inverse --> world@hello 
+            alex --> 4 caractères --> pair --> inverse --> exal
         """
 
-        if get_len(coded_msg)%2 == 1:
+        if milieu(coded_msg)%2 == 1:
             coded_msg = coded_msg + choice(groupe_b)
 
-        a = coded_msg[:get_len(coded_msg)]
-        b = coded_msg[get_len(coded_msg):]
+        a = coded_msg[:milieu(coded_msg)]
+        b = coded_msg[milieu(coded_msg):]
 
         return b+a
     
@@ -333,17 +329,16 @@ def mse_decipher(coded_msg):
     
     return msg
 
+
 def cycle(msg):
     """
     Renvoie un message quand peut déchiffrer
+    "Corrige" un bug inconnu qui fait que lorsque on chiffre
+    plusieurs message le programme renvoie des caractères illisibles
     """
     msg = mse_cipher(msg)
     while check_char(mse_decipher(msg)) is True:
         msg = mse_cipher(msg)
 
     return msg
-
-
-
-
 
