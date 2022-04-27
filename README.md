@@ -1,4 +1,4 @@
-![logo file](logo.jpg)
+![logo file](logo.png)
 
 # MSE PROJECT
 -------------------------------------
