@@ -3,7 +3,7 @@
 """
 librairie de clé: keylib
 fichier qui contient plusieurs clé de chiffrement
-
+Attention de ne pas publier vos clé de chiffrement
 """
 
 from random import randint,choice

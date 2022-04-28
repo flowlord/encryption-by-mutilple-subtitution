@@ -59,3 +59,6 @@ fa,fb = (100,500)
 liste_mots = open('word_lst.txt','r').readlines()
 liste_mots = [x.replace('\n','') for x in liste_mots]
 
+
+
+

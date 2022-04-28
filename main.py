@@ -6,14 +6,14 @@ MSE (multiple substitution encryption)
 
 Créer le mardi 22 janvier 2019 à 01:10 
 
-@author: FLOW LORD
+@author: Flow Lord
 
 twitter: https://twitter.com/flowlord_
 
-Demo: https://youtu.be/81vH2tkX6cs
+démo: https://youtu.be/81vH2tkX6cs
 		  https://youtu.be/RRgbowrAQ0g
 
-website: https://solarissoftwarebulares.fun/
+site web: https://solarissoftwarebulares.fun/
 
 version: MS3
 
@@ -21,11 +21,22 @@ supprimer le dossier __pycache__ avant de regénèrer vos clés
 
 """
 
-from MSE import cycle,mse_decipher,check_char,check_word,randint
+from MSE import cycle,mse_decipher
 
 
-example_sentences = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
+example_phrase = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
 			'que faites vous','a bientot','à la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien']
+
+
+def chiffrer_plusieurs_messages(liste):
+	for message in liste:
+		print(cycle(message),'\n')
+
+
+def déchiffrer_plusieurs_messages(liste):
+	for message in liste:
+		print(mse_decipher(message),'\n')
+
 
 
 print('Text chiffré:\n')
@@ -34,6 +45,5 @@ print(message,'\n\n')
 
 print('Texte déchiffré:\n')
 print(mse_decipher(message))
-
 
 
