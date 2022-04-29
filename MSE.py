@@ -194,7 +194,6 @@ class Bloc_B():
         for letter in range(nbr_lettre_sub):
             plain_text = plain_text.replace(caractere_sub[letter],key[letter][1])
             
-        copy(plain_text)
         return plain_text
 
     def deconfuse(code):
@@ -281,6 +280,7 @@ def mse_cipher(msg):
     coded = Bloc_C.chaos(coded,randint(fa,fb))
     coded = Bloc_C.blop64(coded)
     
+    copy(coded)
     return coded
 
 def mse_decipher(coded_msg):
@@ -296,13 +296,14 @@ def cycle(msg):
     "Corrige" un bug inconnu qui fait que lorsque on chiffre
     plusieurs message le programme renvoie des caractères illisibles
     """
+    original = msg
     msg = mse_cipher(msg)
     d = mse_decipher(msg)
 
     while check_char(d) is True:
-        msg = mse_cipher(msg)
+        msg = mse_cipher(original)
         d = mse_decipher(msg)
-
+    
     return msg
 
 
