@@ -79,7 +79,7 @@ def mixer():
 	for _ in range(2):
 		init = mixer_string(init)
 
-	f = open('initpat1.txt','w',encoding='utf-8')
+	f = open('initpat.txt','w',encoding='utf-8')
 	f.write(init)
 	f.close()
 
