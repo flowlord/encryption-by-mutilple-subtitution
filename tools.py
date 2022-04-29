@@ -44,7 +44,11 @@ def reinitialiser():
 		os.remove("keylib.py")
 	else:
 		pass
-	shutil.rmtree('__pycache__')
+	
+	try:
+		shutil.rmtree('__pycache__')
+	except FileNotFoundError:
+		pass
 
 
 def mixer():
