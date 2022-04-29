@@ -3,7 +3,7 @@
 """
 librairie de clé: keylib
 fichier qui contient plusieurs clé de chiffrement
-Attention à ne pas rendre publique vos clé de chiffrement
+Attention de ne pas publier vos clé de chiffrement
 """
 
 from random import randint,choice
@@ -61,9 +61,8 @@ def generateur_liste_cle(keyNumber):
 
 def gen_lib_cle(keyNumber):
     """
-    Génère une librairie de clé (keylib)
+    Génère une librairie de clé
     """
-    mixer()
 
     file = open('keylib.py','w',encoding='utf-8')
 
@@ -72,7 +71,7 @@ def gen_lib_cle(keyNumber):
     motif = '▨'
     
     file.write('# coding: utf-8\n')
-    file.write('from random import choice\n')
+    file.write('from random import choice\n\n')
     
     for number in range(1,keyNumber+1):
         print(number,motif+'\n')
@@ -80,10 +79,11 @@ def gen_lib_cle(keyNumber):
 
         file.write(f'KEY{number} = {generateur_cle(nbr_lettre_sub)}\n')
     
-    file.write(f'listkey = {generateur_liste_cle(keyNumber)}\n')
+    file.write(f'listkey = {generateur_liste_cle(keyNumber)}\n\n')
 
     file.write('def getRandomKey():\n')
     file.write('\treturn choice(listkey)')
     file.close()
 
     print('keylib.py Generated')
+
