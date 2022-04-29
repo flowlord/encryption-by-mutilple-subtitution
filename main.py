@@ -38,12 +38,12 @@ def déchiffrer_plusieurs_messages(liste):
 		print(mse_decipher(message),'\n')
 
 
+def demo():
+	print('Text chiffré:\n')
+	message = cycle('meeting tonight for speak')
+	print(message,'\n\n')
 
-print('Text chiffré:\n')
-message = cycle('meeting tonight for speak')
-print(message,'\n\n')
+	print('Texte déchiffré:\n')
+	print(mse_decipher(message))
 
-print('Texte déchiffré:\n')
-print(mse_decipher(message))
-
-
+demo()
