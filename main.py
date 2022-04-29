@@ -38,6 +38,19 @@ def déchiffrer_plusieurs_messages(liste):
 		print(mse_decipher(message),'\n')
 
 
+def tester_modification(x):
+	"""
+	Chiffre x fois le même message pour
+	tester si le déchiffrement se passe bien
+	pratique quand on à modifier le code source
+	(permet aussi d'afficher un bug)
+	"""
+
+	for e in range(100):
+		m = mse_cipher('meeting tonight for speak')
+		print(mse_decipher(m))
+
+		
 def demo():
 	print('Text chiffré:\n')
 	message = cycle('meeting tonight for speak')
