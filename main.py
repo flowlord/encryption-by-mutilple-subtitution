@@ -21,16 +21,14 @@ supprimer le dossier __pycache__ avant de regénèrer vos clés
 
 """
 
-from MSE import cycle,mse_decipher
-
+from MSE import mse_cipher,mse_decipher
 
 example_phrase = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
 			'que faites vous','a bientot','à la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien']
 
-
 def chiffrer_plusieurs_messages(liste):
 	for message in liste:
-		print(cycle(message),'\n')
+		print(mse_cipher(message),'\n')
 
 
 def déchiffrer_plusieurs_messages(liste):
@@ -40,10 +38,12 @@ def déchiffrer_plusieurs_messages(liste):
 
 def demo():
 	print('Text chiffré:\n')
-	message = cycle('meeting tonight for speak')
+	message = mse_cipher('meeting tonight for speak')
 	print(message,'\n\n')
 
 	print('Texte déchiffré:\n')
 	print(mse_decipher(message))
 
 demo()
+
+
