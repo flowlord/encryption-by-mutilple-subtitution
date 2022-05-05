@@ -78,7 +78,7 @@ pensez à mélanger les caractères du fichier initpat.txt à l'aide de la fonct
 le monde merveilleux des secrets, des lettres et des
 chiffres.
 
-
+[Serveur Discord Officiel ](https://discord.gg/YQCufGwwwt)
 ![demo file](demo/demo.jpg)
 
 
