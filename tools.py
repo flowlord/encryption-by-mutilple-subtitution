@@ -73,8 +73,7 @@ def mixer():
 	f.close()
 
 
-#gen_many_keylib(x,x)
-#reinitialiser()
+#mixer()
 
 
 

@@ -8,7 +8,6 @@ Attention de ne pas publier vos clé de chiffrement
 
 from random import randint,choice
 from parametre import*
-from tools import mixer
 
 def genCaractere(x):
     """
@@ -86,4 +85,5 @@ def gen_lib_cle(keyNumber):
     file.close()
 
     print('keylib.py Generated')
+
 
