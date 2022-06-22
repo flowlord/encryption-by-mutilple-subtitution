@@ -51,10 +51,6 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
     II) Bloc C
         Complexifie le code après la substitution.
 
-# Attention
----------------------------
-Un bug inconnu fait que parfois le programme à du mal à déchiffrer le message
-
 # Astuces
 ---------------------------
 
