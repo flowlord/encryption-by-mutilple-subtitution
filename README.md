@@ -75,9 +75,9 @@ le monde merveilleux des secrets, des lettres et des
 chiffres.
 
 -----------------------
-Autre version 1: [Slot Border Cut](https://github.com/flowlord/MSE-SlotBorderCut)
+Autre version 1: [SlotBorderCut](https://github.com/flowlord/MSE-SlotBorderCut)
 
-Autre version 2: [parametre.py](https://github.com/flowlord/MSE-GRUYERE-CHEESE)
+Autre version 2: [GRUYERE CHEESE](https://github.com/flowlord/MSE-GRUYERE-CHEESE)
 
 ---------------------------------------
 ---------------------------------------
