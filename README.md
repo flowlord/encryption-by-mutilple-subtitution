@@ -8,19 +8,19 @@
 Chiffrement par subtitution multiple
 
 projet sur un programme de chiffrement par subtitution multiple,
-pour but de créer des messages courts codés.
+pour but de créer des messages codés avec des phrases courtes.
 
 pratique pour:
     créer des énigmes complexes
     hacher un mot de passe
-    **aprendre la cryptographie et cryptanalyse !**
+    **aprendre la cryptographie et la cryptanalyse !**
 
 pas pratique pour:
     **sécurisé ces données**
 
 **Normalement il faut avoir les clés de chiffrement pour pouvoir déchiffrer les messages de quelqu'un d'autre, normalement ! (Tentez de décoder les messages sans le programme !)**
 
-**Attention si vous perdez vous clés, tous les messages que vous avez chiffrées avant seront plus possible à déchiffrer (comme si vous perdez vous bitcoin à jamais !**
+**Attention si vous perdez vos clés, tous les messages que vous avez chiffrées précédemment seront plus possible à déchiffrer (comme si vous perdez vous bitcoin à jamais !**
 
 Tous est facilement paramétrable dans le fichier [parametre.py](https://github.com/flowlord/encryption-by-mutilple-subtitution/blob/main/parametre.py)
 ---------------------------------------
@@ -66,13 +66,22 @@ mot de votre langue ou inventez des mots.
 modifier la liste des lettres spéciaux
 
 Cette méthode de chiffrement reste vulnérable
-aux attaques, ne chriffrer pas vos données personel avec cette méthode !!
+aux attaques, ne chiffrer pas vos données personel avec cette méthode !
 
 pensez à mélanger les caractères du fichier initpat.txt à l'aide de la fonction mixeur.
 
 -----------------------------------
 le monde merveilleux des secrets, des lettres et des
 chiffres.
+
+-----------------------
+Autre version 1: [Slot Border Cut](https://github.com/flowlord/MSE-SlotBorderCut)
+
+Autre version 2: [parametre.py](https://github.com/flowlord/MSE-GRUYERE-CHEESE)
+
+---------------------------------------
+---------------------------------------
+
 
 [Serveur Discord Officiel ](https://discord.gg/YQCufGwwwt)
 ![demo file](demo/demo.jpg)
