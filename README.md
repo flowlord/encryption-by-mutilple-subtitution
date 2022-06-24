@@ -54,6 +54,10 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 # Astuces
 ---------------------------
 
+Si le programme a du mal
+à déchiffrer un mot que sa soit en français ou
+en anglais vérifier l'orthographe de ce mot et/ou qui est présent dans le fichier word_lst.txt
+
 modifier les caractères du fichier initpat.txt
 Mettez ce que vous voulez sauf les caractères
 que vous souhaitez remplacer.
