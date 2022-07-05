@@ -51,6 +51,14 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
     II) Bloc C
         Complexifie le code après la substitution.
 
+
+# Usage
+---------------------------
+	main.py (cipher | c) "message"
+	
+	main.py (decipher | d) (le message est automatiquement colé)
+
+
 # Astuces
 ---------------------------
 
@@ -76,7 +84,7 @@ pensez à mélanger les caractères du fichier initpat.txt à l'aide de la fonct
 
 -----------------------------------
 le monde merveilleux des secrets, des lettres et des
-chiffres.
+chiffres !
 
 -----------------------
 Autre version 1: [SlotBorderCut](https://github.com/flowlord/MSE-SlotBorderCut)
@@ -87,7 +95,7 @@ Autre version 2: [GRUYERE CHEESE](https://github.com/flowlord/MSE-GRUYERE-CHEESE
 ---------------------------------------
 
 
-[Serveur Discord Officiel ](https://discord.gg/YQCufGwwwt)
+[Serveur Discord officiel ](https://discord.gg/YQCufGwwwt)
 ![demo file](demo/demo.jpg)
 
 
