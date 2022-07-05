@@ -12,7 +12,7 @@
         Complexifie le code après la substitution.
 """
 
-from pyperclip import copy
+from pyperclip import copy,paste
 from parametre import*
 from random import randint,choice
 

@@ -40,12 +40,12 @@ groupe_b = groupe_caracteres_initial[mileu:]
 
 
 # IV)
-lettre_special = 'esdntryozxca'+espace
+lettre_special = 'esdntxca'+espace
 
-groupe_b = groupe_b+''.join(caractere_sub)*150+lettre_special*200
+groupe_b = groupe_b+''.join(caractere_sub)*50+lettre_special*50
 
-longeur_caractere = (6,8)
-longeur_lettre_special = (2,5)
+longeur_caractere = (5,7)
+longeur_lettre_special = (2,4)
 
 nombre_cle = (10,100)
 
@@ -53,11 +53,12 @@ nombre_cle = (10,100)
 # de nombre de caractère qui peuvent être ajouté
 # ( un nombre maximume élévé peut entrainer un bug d'affichage
 # de votre IDE et ralentir le programme !)
-fa,fb = (100,500)
+fa,fb = (50,100)
 
 # Rajoutez des noms, prénom dans la list ! (sans accent ni majuscule)
 liste_mots = open('word_lst.txt','r').readlines()
 liste_mots = [x.replace('\n','') for x in liste_mots]
+
 
 
 

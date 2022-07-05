@@ -21,10 +21,12 @@ supprimer le dossier __pycache__ avant de regénèrer vos clés
 
 """
 
-from MSE import mse_cipher,mse_decipher
+from MSE import mse_cipher,mse_decipher,paste
+import sys
 
 example_phrase = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
 			'que faites vous','a bientot','à la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien']
+
 
 def chiffrer_plusieurs_messages(liste):
 	for message in liste:
@@ -44,6 +46,31 @@ def demo():
 	print('Texte déchiffré:\n')
 	print(mse_decipher(message))
 
-demo()
+
+def main():
+	"""
+	Uasage:
+		main.py cipher or d "message"
+		main.py decipher or d (le message est automatiquement coller)
+	"""
+	
+	cip = ['cipher','c']
+	dec = ['decipher','d']
+	
+	if sys.argv[1] not in cip and sys.argv[1] not in dec:
+		if sys.argv[1] == "demo":
+			demo()
+		else:
+			print('commnde invalide')
+		
+	elif sys.argv[1] in cip:
+		print(mse_cipher(sys.argv[2]))
+		
+	elif sys.argv[1] in dec:
+		print(mse_decipher(paste()))
+		
+
+main()
+
 
 

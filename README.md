@@ -27,9 +27,15 @@ Tous est facilement paramétrable dans le fichier [parametre.py](https://github.
 
 # REQUIS !
 -------------------------------------
-Pour copier le code automatiquement vous devez installez le module [pyperclip](https://pypi.org/project/pyperclip/)
+Pour copier le message automatiquement vous devez installez le module [pyperclip](https://pypi.org/project/pyperclip/)
 
-> pip install pyperclip
+	> pip install pyperclip
+	
+[pyAesCrypt](https://pypi.org/project/pyAesCrypt/) pour chiffrer et envoyer vos clés de chiffrement
+
+	> pip install pyAesCrypt
+
+	
 -------------------------------------
 
 **le fichier keylib.py sont vous clés de chiffrement, gardez les secret à tous prix !**
@@ -59,12 +65,28 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 	main.py (decipher | d) (le message est automatiquement colé)
 
 
+# Exemples:
+---------------------------
+	$ python main.py c "meeting tonight for speak"
+	
+	> 쓗턞🃅὎꾋⦏넲糀뀅獀㬶㜹킹껥⩞刍鲵鴇ꁺ樈蓅𒉗ﳀ𝌐㏘⠹楨ꎷ䤁ዚ㬙譆귘鷛堘籉뫴됺𒀀뀤넵⤯頨ꍪ扰𓋊Ჷ휏鹃𓃖農挘ᎇچめⶴ 㥅셋וֹ꿮뛋巭
+	
+	$ python main.py decipher
+	
+	> meeting tonight for speak
+
+
+# Remarque:
+Vous devez copier le message secret avant de le déchiffrer
+
 # Astuces
 ---------------------------
 
 Si le programme a du mal
 à déchiffrer un mot que sa soit en français ou
 en anglais vérifier l'orthographe de ce mot et/ou qui est présent dans le fichier word_lst.txt
+
+utiliser la fonction encrypt_keylib dans tools.py pour chiffrer et envoyer vos clés de chiffrement
 
 modifier les caractères du fichier initpat.txt
 Mettez ce que vous voulez sauf les caractères
@@ -97,5 +119,7 @@ Autre version 2: [GRUYERE CHEESE](https://github.com/flowlord/MSE-GRUYERE-CHEESE
 
 [Serveur Discord officiel ](https://discord.gg/YQCufGwwwt)
 ![demo file](demo/demo.jpg)
+![demo file 2](demo/cap_ex.png)
+![demo file 3](demo/cap_ex2.png)
 
 

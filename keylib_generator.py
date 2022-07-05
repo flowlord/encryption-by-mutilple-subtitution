@@ -25,7 +25,7 @@ def generateur_cle(nbr_lettre_sub):
     Génère les clés avec une longeur choisit
 
     Exemple:
-        KEYX = [('a','⥰Ꮖᣧ㎮⥚⻗ጟⲢ'), ('b','𐊐Ϳקּ࢛'), ('c','ڠᖪᴼૄȪ'),  ... ]
+        KEYX = [('a','⥰Ꮖᣧ㎮⥚⻗ጟⲢ'), ('b','𐊐Ϳקּ࢛'), ('c','ڠᖪᴼૄȪ'),  etc... ]
     """
 
     cle = ''
@@ -64,17 +64,11 @@ def gen_lib_cle(keyNumber):
     """
 
     file = open('keylib.py','w',encoding='utf-8')
-
-    print('[ Génération des clés en cour ... ]\n')
-
-    motif = '▨'
     
     file.write('# coding: utf-8\n')
     file.write('from random import choice\n\n')
     
     for number in range(1,keyNumber+1):
-        print(number,motif+'\n')
-        motif = motif+'▨'
 
         file.write(f'KEY{number} = {generateur_cle(nbr_lettre_sub)}\n')
     
@@ -85,5 +79,7 @@ def gen_lib_cle(keyNumber):
     file.close()
 
     print('keylib.py Generated')
+
+
 
 

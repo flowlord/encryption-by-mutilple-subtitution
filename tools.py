@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import os
-from random import shuffle
+from random import shuffle,choice,randint
 import shutil
+from string import ascii_letters,digits,punctuation
+import pyAesCrypt
 
 
 def gen_many_keylib(x,keyNumber):
@@ -50,6 +52,40 @@ def reinitialiser():
 	except FileNotFoundError:
 		pass
 
+def gen_mdp():
+	p = ""
+	char = ascii_letters+digits+punctuation
+	
+	for c in range(randint(10,15)):
+		p = p + choice(char)
+	
+	return p
+
+
+def encrypt_keylib():
+	"""
+	pour chiffrer vos clés de chiffrement.
+
+	"""
+	if os.path.exists("keylib.py"):
+		password = gen_mdp()
+		print('mot de passe:',password)
+		pyAesCrypt.encryptFile("keylib.py", "keylib.aes", password)
+		
+	else:
+		pass
+
+
+def decrypt_keylib(password):
+	"""
+	pour déchiffrer vos clés de chiffrement.
+
+	"""
+	if os.path.exists("keylib.aes"):
+		pyAesCrypt.decryptFile("keylib.aes", "keylib.py", password)
+	else:
+		pass
+
 
 def mixer():
 	"""
@@ -73,7 +109,6 @@ def mixer():
 	f.close()
 
 
-#mixer()
 
 
 
