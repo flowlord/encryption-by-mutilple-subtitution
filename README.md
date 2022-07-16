@@ -1,5 +1,14 @@
 ![logo file](logo.png)
 
+
+	███╗   ███╗  ██████╗ ███████╗
+	████╗ ████║ ██╔════╝ ██╔════╝
+	██╔████╔██║ ╚█████╗  █████╗
+	██║╚██╔╝██║  ╚═══██╗ ██╔══╝
+	██║ ╚═╝ ██║ ██████╔╝ ███████╗
+	╚═╝     ╚═╝ ╚═════╝  ╚══════╝
+
+
 # MSE PROJECT
 -------------------------------------
 
@@ -60,18 +69,31 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 
 # Usage
 ---------------------------
-	main.py (cipher | c) "message"
+	For cipher and decipher message
+	--------------------------------------------
+		
+		MSE.py c "message"
+		MSE.py d (le message est automatiquement coller)
+		
+		
+	for cipher keylib
+	----------------------
+		MSE.py cry
+		MSE.py des (le mot de passe est automatiquement coller)
 	
-	main.py (decipher | d) (le message est automatiquement colé)
+	
+	For remove keylib
+	----------------------
+		MSE.py R
 
 
 # Exemples:
 ---------------------------
-	$ python main.py c "meeting tonight for speak"
+	$ python MSE.py c "meeting tonight for speak"
 	
 	> 쓗턞🃅὎꾋⦏넲糀뀅獀㬶㜹킹껥⩞刍鲵鴇ꁺ樈蓅𒉗ﳀ𝌐㏘⠹楨ꎷ䤁ዚ㬙譆귘鷛堘籉뫴됺𒀀뀤넵⤯頨ꍪ扰𓋊Ჷ휏鹃𓃖農挘ᎇچめⶴ 㥅셋וֹ꿮뛋巭
 	
-	$ python main.py decipher
+	$ python MSE.py decipher
 	
 	> meeting tonight for speak
 

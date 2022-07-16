@@ -1,5 +1,25 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """
+	MSE (multiple substitution encryption)
+
+	Créer le mardi 22 janvier 2019 à 01:10 
+
+	@author: Flow Lord
+
+	twitter: https://twitter.com/flowlord_
+
+	démo: https://youtu.be/81vH2tkX6cs
+			  https://youtu.be/RRgbowrAQ0g
+
+	site web: https://solarissoftwarebulares.fun/
+
+	version: MS3
+
+	supprimer le dossier __pycache__ avant de regénèrer vos clés
+	
+#-----------------------------------------------------------------------------------------
     INPUT --> A --> B --> C --> output
 
     I) Bloc A
@@ -12,9 +32,13 @@
         Complexifie le code après la substitution.
 """
 
+
 from pyperclip import copy,paste
 from parametre import*
 from random import randint,choice
+from tools import encrypt_keylib,decrypt_keylib,reinitialiser
+import sys
+
 
 try:
     from keylib import listkey,getRandomKey
@@ -291,5 +315,106 @@ def mse_decipher(coded_msg):
     msg = decipher(msg)
 
     return msg
+
+#-----------------------------------------------------------------------------------------
+
+
+
+example_phrase = ['meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous',
+			'que faites vous','a bientot','à la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien']
+
+
+def chiffrer_plusieurs_messages(liste):
+	for message in liste:
+		print(mse_cipher(message),'\n')
+
+
+def déchiffrer_plusieurs_messages(liste):
+	for message in liste:
+		print(mse_decipher(message),'\n')
+
+
+def demo():
+	print('Text chiffré:\n')
+	message = mse_cipher('meeting tonight for speak')
+	print(message,'\n\n')
+
+	print('Texte déchiffré:\n')
+	print(mse_decipher(message))
+
+#-----------------------------------------------------------------------------------------
+
+intro = """
+
+███╗   ███╗  ██████╗ ███████╗
+████╗ ████║ ██╔════╝ ██╔════╝
+██╔████╔██║ ╚█████╗  █████╗
+██║╚██╔╝██║  ╚═══██╗ ██╔══╝
+██║ ╚═╝ ██║ ██████╔╝ ███████╗
+╚═╝     ╚═╝ ╚═════╝  ╚══════╝
+"""
+
+def main():
+	"""
+	Uasage:
+		For cipher and decipher message
+		--------------------------------------------
+		
+		MSE.py c "message"
+		MSE.py d (le message est automatiquement coller)
+		
+		for cipher keylib
+		----------------------
+		MSE.py cry
+		MSE.py des PASSWORD
+		
+		For remove keylib
+		
+		----------------------
+		MSE.py R
+	"""
+	
+	cip = ['cipher','c']
+	dec = ['decipher','d']
+	cryp = ['cryp','cr','cry']
+	des = ['des','de','decr']
+	reset = ['r','R','reset','delete','del']
+	
+	_all_ = cip+dec+cryp+des+reset
+	
+	if sys.argv[1] not in _all_:
+		if sys.argv[1] == "demo":
+			demo()
+		else:
+			print('commnde invalide')
+		
+	elif sys.argv[1] in cip:
+		print(mse_cipher(sys.argv[2]))
+		
+	elif sys.argv[1] in dec:
+		print(mse_decipher(paste()))
+	
+	elif sys.argv[1] in cryp:
+		encrypt_keylib()
+		print('[Clées chiffrer]')
+		
+	elif sys.argv[1] in des:
+		decrypt_keylib(paste())
+		print('[Clées déchiffrer]')
+	
+	elif sys.argv[1] in reset:
+		print('Vos clées de chiffrement va être suprimer !')
+		user = input('Etes vous sur ? ')
+		
+		if user in ['y','yes','oui','o','da']:
+			reinitialiser()
+			print('[Clées chiffrement suprimer]')
+		else:
+			pass
+
+
+print(intro)
+main()
+
 
 

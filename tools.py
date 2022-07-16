@@ -47,10 +47,7 @@ def reinitialiser():
 	else:
 		pass
 	
-	try:
-		shutil.rmtree('__pycache__')
-	except FileNotFoundError:
-		pass
+	shutil.rmtree('__pycache__')
 
 def gen_mdp():
 	p = ""
@@ -69,7 +66,7 @@ def encrypt_keylib():
 	"""
 	if os.path.exists("keylib.py"):
 		password = gen_mdp()
-		print('mot de passe:',password)
+		print('mot de passe: ',password)
 		pyAesCrypt.encryptFile("keylib.py", "keylib.aes", password)
 		
 	else:
@@ -89,7 +86,7 @@ def decrypt_keylib(password):
 
 def mixer():
 	"""
-	mix the order of characters
+	Mélange l'ordre des caractères
 	example:
 		AAAZZZ ---> | mixer(2) | ---> ZAAZAZ
 	"""
