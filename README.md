@@ -138,6 +138,8 @@ Autre version 2: [GRUYERE CHEESE](https://github.com/flowlord/MSE-GRUYERE-CHEESE
 ---------------------------------------
 ---------------------------------------
 
+Tantez de casser l'algorithme avec le programme: [MARS ATTACK](https://discord.gg/E6qJmmKaEW)
+
 
 [Serveur Discord officiel ](https://discord.gg/YQCufGwwwt)
 ![demo file](demo/demo.jpg)
