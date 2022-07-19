@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#.  Copyright (C) 2019-2022   Flow.L
 
 """
+
+	███╗   ███╗  ██████╗ ███████╗
+	████╗ ████║ ██╔════╝ ██╔════╝
+	██╔████╔██║ ╚█████╗  █████╗
+	██║╚██╔╝██║  ╚═══██╗ ██╔══╝
+	██║ ╚═╝ ██║ ██████╔╝ ███████╗
+	╚═╝     ╚═╝ ╚═════╝  ╚══════╝
+	
 	MSE (multiple substitution encryption)
 
 	Créer le mardi 22 janvier 2019 à 01:10 
@@ -10,12 +19,7 @@
 
 	twitter: https://twitter.com/flowlord_
 
-	démo: https://youtu.be/81vH2tkX6cs
-			  https://youtu.be/RRgbowrAQ0g
-
-	site web: https://solarissoftwarebulares.fun/
-
-	version: MS3
+	version name: CRC III
 
 	supprimer le dossier __pycache__ avant de regénèrer vos clés
 	
@@ -32,11 +36,39 @@
         Complexifie le code après la substitution.
 """
 
+__doc__ = """
+
+Uasage:
+	
+	1) For cipher and decipher message
+		-------------------------------------------->
+		MSE.py c "message"
+		MSE.py d (the message is automatically pasted, copy the code before paste)
+
+
+	2) For cipher and decipher cipher keys
+		---------------------->
+		MSE.py cry
+		MSE.py des PASSWORD (the password is automatically pasted, copy the password before paste)
+
+
+	3) For remove cipher keys
+		---------------------->
+		MSE.py R
+
+		
+		
+	4) For mix initpat (also removes the cipher keys)
+		---------------------->
+		MSE.py M
+		
+"""
+
 
 from pyperclip import copy,paste
 from parametre import*
 from random import randint,choice
-from tools import encrypt_keylib,decrypt_keylib,reinitialiser
+from tools import encrypt_keylib,decrypt_keylib,reinitialiser,mixer
 import sys
 
 
@@ -344,49 +376,25 @@ def demo():
 
 #-----------------------------------------------------------------------------------------
 
-intro = """
-
-███╗   ███╗  ██████╗ ███████╗
-████╗ ████║ ██╔════╝ ██╔════╝
-██╔████╔██║ ╚█████╗  █████╗
-██║╚██╔╝██║  ╚═══██╗ ██╔══╝
-██║ ╚═╝ ██║ ██████╔╝ ███████╗
-╚═╝     ╚═╝ ╚═════╝  ╚══════╝
-"""
 
 def main():
-	"""
-	Uasage:
-		For cipher and decipher message
-		--------------------------------------------
-		
-		MSE.py c "message"
-		MSE.py d (le message est automatiquement coller)
-		
-		for cipher keylib
-		----------------------
-		MSE.py cry
-		MSE.py des PASSWORD
-		
-		For remove keylib
-		
-		----------------------
-		MSE.py R
-	"""
-	
-	cip = ['cipher','c']
-	dec = ['decipher','d']
+
+	cip = ['cipher','c','C','cip']
+	dec = ['decipher','d','D','dec']
 	cryp = ['cryp','cr','cry']
 	des = ['des','de','decr']
+	mxr = ['M','m','mixer','mix','mxr']
 	reset = ['r','R','reset','delete','del']
+	h = ['H','h','Help me','aide moi','A','a']
 	
-	_all_ = cip+dec+cryp+des+reset
+	_all_ = cip+dec+cryp+des+reset+mxr+h
 	
 	if sys.argv[1] not in _all_:
 		if sys.argv[1] == "demo":
+			print('---------- * DEMO * ----------')
 			demo()
 		else:
-			print('commnde invalide')
+			print('commande invalide')
 		
 	elif sys.argv[1] in cip:
 		print(mse_cipher(sys.argv[2]))
@@ -396,25 +404,25 @@ def main():
 	
 	elif sys.argv[1] in cryp:
 		encrypt_keylib()
-		print('[Clées chiffrer]')
+		print('[Clés chiffré]')
 		
 	elif sys.argv[1] in des:
 		decrypt_keylib(paste())
-		print('[Clées déchiffrer]')
+		print('[Clés déchiffré]')
 	
 	elif sys.argv[1] in reset:
-		print('Vos clées de chiffrement va être suprimer !')
-		user = input('Etes vous sur ? ')
-		
-		if user in ['y','yes','oui','o','da']:
-			reinitialiser()
-			print('[Clées chiffrement suprimer]')
-		else:
-			pass
+		reinitialiser()
+	
+	elif sys.argv[1] in mxr:
+		mixer()
+	
+	elif sys.argv[1] in h:
+		print(__doc__)
 
 
-print(intro)
 main()
+
+
 
 
 

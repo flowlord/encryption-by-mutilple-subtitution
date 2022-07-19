@@ -1,12 +1,12 @@
 ![logo file](logo.png)
 
 
-	███╗   ███╗  ██████╗ ███████╗
-	████╗ ████║ ██╔════╝ ██╔════╝
-	██╔████╔██║ ╚█████╗  █████╗
-	██║╚██╔╝██║  ╚═══██╗ ██╔══╝
-	██║ ╚═╝ ██║ ██████╔╝ ███████╗
-	╚═╝     ╚═╝ ╚═════╝  ╚══════╝
+███╗   ███╗  ██████╗ ███████╗
+████╗ ████║ ██╔════╝ ██╔════╝
+██╔████╔██║ ╚█████╗  █████╗
+██║╚██╔╝██║  ╚═══██╗ ██╔══╝
+██║ ╚═╝ ██║ ██████╔╝ ███████╗
+╚═╝     ╚═╝ ╚═════╝  ╚══════╝
 
 
 # MSE PROJECT
@@ -21,7 +21,6 @@ pour but de créer des messages codés avec des phrases courtes.
 
 pratique pour:
     créer des énigmes complexes
-    hacher un mot de passe
     **aprendre la cryptographie et la cryptanalyse !**
 
 pas pratique pour:
@@ -32,6 +31,9 @@ pas pratique pour:
 **Attention si vous perdez vos clés, tous les messages que vous avez chiffrées précédemment seront plus possible à déchiffrer (comme si vous perdez vous bitcoin à jamais !**
 
 Tous est facilement paramétrable dans le fichier [parametre.py](https://github.com/flowlord/encryption-by-mutilple-subtitution/blob/main/parametre.py)
+
+**Nom de version: CRC III**
+
 ---------------------------------------
 
 # REQUIS !
@@ -64,28 +66,33 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
         Chaque caractère est substitué.
 --------------------------------------------------------------------------
     II) Bloc C
-        Complexifie le code après la substitution.
+        Ajoute des caractères dans le code après la substitution.
 
 
 # Usage
 ---------------------------
-	For cipher and decipher message
-	--------------------------------------------
-		
+	
+	1) For cipher and decipher message
+		-------------------------------------------->
 		MSE.py c "message"
-		MSE.py d (le message est automatiquement coller)
-		
-		
-	for cipher keylib
-	----------------------
-		MSE.py cry
-		MSE.py des (le mot de passe est automatiquement coller)
-	
-	
-	For remove keylib
-	----------------------
-		MSE.py R
+		MSE.py d (the message is automatically pasted, copy the code before paste)
 
+
+	2) For cipher and decipher cipher keys
+		---------------------->
+		MSE.py cry
+		MSE.py des PASSWORD (the password is automatically pasted, copy the password before paste)
+
+
+	3) For remove cipher keys
+		---------------------->
+		MSE.py R
+		
+		
+	4) For mix initpat (also removes the cipher keys)
+		---------------------->
+		MSE.py M
+	
 
 # Exemples:
 ---------------------------
@@ -93,7 +100,7 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 	
 	> 쓗턞🃅὎꾋⦏넲糀뀅獀㬶㜹킹껥⩞刍鲵鴇ꁺ樈蓅𒉗ﳀ𝌐㏘⠹楨ꎷ䤁ዚ㬙譆귘鷛堘籉뫴됺𒀀뀤넵⤯頨ꍪ扰𓋊Ჷ휏鹃𓃖農挘ᎇچめⶴ 㥅셋וֹ꿮뛋巭
 	
-	$ python MSE.py decipher
+	$ python MSE.py d
 	
 	> meeting tonight for speak
 
@@ -101,8 +108,12 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 # Remarque:
 Vous devez copier le message secret avant de le déchiffrer
 
+
 # Astuces
 ---------------------------
+
+**Attention vous devez mélanger vos caractères spéciaux (grâce à la commande: python MSE.py M), il ne doit en aucun cas ressembler à celui du code source. Prenez le code source et modifier le, créer une version personnalisée du projet, plus il ne ressemblera pas au code source originale, plus il a de chance qu'il soit difficile à casser, faite votre propre version du projet, généré votre clé de chiffrement, modifier les paramètres, envoyer le projet entier à votre correspondant et vous pouvez communiquer de manière sécurisé.**
+
 
 Si le programme a du mal
 à déchiffrer un mot que sa soit en français ou
@@ -124,8 +135,6 @@ modifier la liste des lettres spéciaux
 Cette méthode de chiffrement reste vulnérable
 aux attaques, ne chiffrer pas vos données personel avec cette méthode !
 
-pensez à mélanger les caractères du fichier initpat.txt à l'aide de la fonction mixeur.
-
 -----------------------------------
 le monde merveilleux des secrets, des lettres et des
 chiffres !
@@ -145,5 +154,6 @@ Tantez de casser l'algorithme avec le programme: [MARS ATTACK](https://discord.g
 ![demo file](demo/demo.jpg)
 ![demo file 2](demo/cap_ex.png)
 ![demo file 3](demo/cap_ex2.png)
+
 
 

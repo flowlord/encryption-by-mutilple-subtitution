@@ -42,12 +42,17 @@ def reinitialiser():
 	et le dossier __pycache__
 	pratique lorsque vous modifiez le code source
 	"""
-	if os.path.exists("keylib.py"):
-		os.remove("keylib.py")
-	else:
-		pass
+	print('Vos clés de chiffrement vont être supprimés !')
+	user = input('Etes-vous sur ? ')
+		
+	if user in ['y','yes','oui','o','da','Y','1']:
 	
-	shutil.rmtree('__pycache__')
+		if os.path.exists("keylib.py"):
+			os.remove("keylib.py")
+		shutil.rmtree('__pycache__')
+		
+		print('[ les clés chiffrement ont été supprimés ]')
+
 
 def gen_mdp():
 	p = ""

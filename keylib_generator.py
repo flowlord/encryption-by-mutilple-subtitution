@@ -78,8 +78,3 @@ def gen_lib_cle(keyNumber):
     file.write('\treturn choice(listkey)')
     file.close()
 
-    print('keylib.py Generated')
-
-
-
-
