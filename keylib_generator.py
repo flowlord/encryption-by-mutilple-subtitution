@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-librairie de clé: keylib
+librairie de clé = keylib
 fichier qui contient plusieurs clé de chiffrement
-Attention de ne pas publier vos clé de chiffrement
+
+Tribute to GENESIS KEY ( a la base un logiciel payant ;) )
 """
 
 from random import randint,choice

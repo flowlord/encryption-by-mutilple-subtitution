@@ -42,24 +42,17 @@ groupe_b = groupe_caracteres_initial[mileu:]
 # IV)
 lettre_special = 'esdntxca'+espace
 
+# Oui je sais cette ligne ne sert à rien, mais c'est quand la personne ne connais pas le type de chiffrement ;)
 groupe_b = groupe_b+''.join(caractere_sub)*50+lettre_special*50
 
 longeur_caractere = (5,7)
-longeur_lettre_special = (2,4)
+longeur_lettre_special = (3,4)
 
-nombre_cle = (10,100)
+nombre_cle = (3,5)
 
 # fa et fb détermine le minimume et maximume
 # de nombre de caractère qui peuvent être ajouté
-# ( un nombre maximume élévé peut entrainer un bug d'affichage
-# de votre IDE et ralentir le programme !)
-fa,fb = (50,100)
-
-# Rajoutez des noms, prénom dans la list ! (sans accent ni majuscule)
-liste_mots = open('word_lst.txt','r').readlines()
-liste_mots = [x.replace('\n','') for x in liste_mots]
-
-
+fa,fb = (100,900)
 
 
 

@@ -8,34 +8,6 @@ from string import ascii_letters,digits,punctuation
 import pyAesCrypt
 
 
-def gen_many_keylib(x,keyNumber):
-	
-	print('[ Generating and writing keylib ... ]\n')
-
-	d = 'keylib lib'
-	os.makedirs(d,exist_ok = True)
-
-	for x in range(1,x+1):
-		name = d+"/keylib_" + str(x)+".py"
-
-		file = open(name,'w',encoding='utf-8')
-		    
-		file.write('# coding: utf-8\n')
-		file.write('from random import choice\n\n')
-		    
-		for number in range(1,keyNumber+1):
-			file.write(f'KEY{number} = {keygen(nbr_letter_sub)}\n')
-			    
-		file.write(f'listkey = {gen_listkey(keyNumber)}\n\n')
-
-		file.write('def getRandomKey():\n')
-		file.write('\treturn choice(listkey)')
-		
-		file.close()
-
-		print(f'{x} keylib generated')
-
-
 def reinitialiser():
 	"""
 	Suprime vos clé de chiffrement !
