@@ -1,4 +1,4 @@
-![logo file](logo.png)
+![image du projet](exemple/logo.png)
 
 
 ███╗   ███╗  ██████╗ ███████╗
@@ -14,7 +14,8 @@
 
 # ENCRYPTION BY MUTILPLE SUBTITUTION
 -------------------------------------
-![demo file](demo/demo.jpg)
+![cover](exemple/cover.jpg)
+
 
 Chiffrement par subtitution multiple
 
@@ -22,7 +23,7 @@ projet sur un programme de chiffrement par subtitution multiple,
 pour but de créer des messages codés avec des phrases courtes.
 
 
-**Normalement il faut avoir les clés de chiffrement pour pouvoir déchiffrer les messages de quelqu'un d'autre, normalement ! (Tentez de [casser les messages sans le programme](https://discord.gg/E6qJmmKaEW)) **
+**Normalement il faut avoir les clés de chiffrement pour pouvoir déchiffrer les messages de quelqu'un d'autre, normalement ! (Tentez de [casser les messages sans le programme](https://discord.gg/E6qJmmKaEW))**
 
 **Attention si vous perdez vos clés, tous les messages que vous avez chiffrées précédemment seront plus possible à déchiffrer (comme si vous perdez vous bitcoin à jamais !**
 
@@ -33,7 +34,7 @@ Tous est facilement paramétrable dans le fichier [parametre.py](https://github.
 
 ---------------------------------------
 
-# REQUIS !
+# REQUIS
 -------------------------------------
 Pour copier le message automatiquement vous devez installez le module [pyperclip](https://pypi.org/project/pyperclip/)
 
@@ -48,7 +49,6 @@ Pour copier le message automatiquement vous devez installez le module [pyperclip
 
 **le fichier keylib.py sont vous clés de chiffrement, gardez les secret à tous prix !**
 Elle est générer lorsque vous chiffrer votre premier message
-pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 
 -------------------------------------
 
@@ -70,13 +70,13 @@ pour régénérer vos clés de chiffrement supprimer le fichier keylib.py
 	1) Chiffrer / Déchiffrer message
 		-------------------------------------------->
 		MSE.py c "message"
-		MSE.py d (the message is automatically pasted, copy the code before paste)
+		MSE.py d
 
 
 	2) Chiffrer vos clés
 		---------------------->
 		MSE.py cry
-		MSE.py des PASSWORD (the password is automatically pasted, copy the password before paste)
+		MSE.py des PASSWORD
 
 
 	3) Supprimer vos clés
@@ -110,8 +110,8 @@ Vous devez copier le message secret avant de le déchiffrer
 
 
 Modifier la longueur des caractères spéciaux qui sont générés.
-
-modifier la liste des lettres spéciaux
+**optez plûtot pour un language de type "sms" du genre: tu fait quoi  ---> tfk**
+modifier la liste des "caractères spéciaux"
 
 Cette méthode de chiffrement reste vulnérable
 aux attaques, ne chiffrer pas vos données personel avec cette méthode !
@@ -120,15 +120,15 @@ Aidez moi plûtot a tentez de le casser.
 -----------------------------------
 le monde merveilleux des secrets, des lettres et des
 chiffres !
-
 ---------------------------------------
 
 Tantez de casser l'algorithme avec le programme: [MARS ATTACK](https://discord.gg/E6qJmmKaEW)
 
 [Serveur Discord officiel ](https://discord.gg/YQCufGwwwt)
 
-![demo file 2](demo/cap_ex.png)
-![demo file 3](demo/cap_ex2.png)
+![demo file 2](exemple/cap_ex.png)
+![demo file 3](exemple/cap_ex2.png)
+
 
 
 
