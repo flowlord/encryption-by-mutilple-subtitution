@@ -14,6 +14,7 @@ def reinitialiser():
 	et le dossier __pycache__
 	pratique lorsque vous modifiez le code source
 	"""
+	
 	print('Vos clés de chiffrement vont être supprimés !')
 	user = input('Etes-vous sur ? ')
 		
@@ -22,6 +23,7 @@ def reinitialiser():
 		if os.path.exists("keylib.py"):
 			os.remove("keylib.py")
 		shutil.rmtree('__pycache__')
+		shutil.rmtree('configs/__pycache__')
 		
 		print('[ les clés chiffrement ont été supprimés ]')
 
@@ -81,7 +83,6 @@ def mixer():
 	f = open('initpat.txt','w',encoding='utf-8')
 	f.write(res)
 	f.close()
-
 
 
 
