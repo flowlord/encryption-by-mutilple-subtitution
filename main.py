@@ -89,7 +89,7 @@ def check_char(msg):
     
     for c in msg:
         if c not in caractere_sub:
-            v = 1
+            flag = 1
     
     return flag == 0
 
