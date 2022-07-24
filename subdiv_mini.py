@@ -6,16 +6,9 @@ SUBDIV MINI
 -----------
 Principe et fonctionnement
 
-abcde --> ab | cd | e (impair)
-abcd --> ab | cd (pair)
-
-C = combinaison
-
-C1: abcde --> ab | cd | e --> change le sens -->c de ab
-C1_inv: fait l'inverse
-
-C2: abcd --> ab | cd --> change le sens --> cdab
-C2_inv: fait l'inverse
+on divisele mot au milieu et met la première moitié à la fin
+et si le nombre de lettres est impair,
+la dernière moitié du mot reçoit le caractère supplémentaire.
 
 """
 

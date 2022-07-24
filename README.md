@@ -30,7 +30,7 @@ pour but de créer des messages codés avec des phrases courtes.
 
 Tous est facilement paramétrable dans le fichier [parametre.py](https://github.com/flowlord/encryption-by-mutilple-subtitution/blob/main/parametre.py)
 
-**Nom de version: CRC V**
+**Nom de version: CRC VI**
 
 ---------------------------------------
 
@@ -106,10 +106,10 @@ Vous devez copier le message secret avant de le déchiffrer
 # Astuces
 ---------------------------
 
-**Attention vous devez mélanger vos caractères spéciaux (grâce à la commande: python MSE.py M), il ne doit en aucun cas ressembler à celui du code source. Prenez le code source et modifier le, créer une version personnalisée du projet, plus il ne ressemblera pas au code source originale, plus il a de chance qu'il soit difficile à casser, faite votre propre version du projet, généré votre clé de chiffrement, modifier les paramètres, envoyer le projet entier (pas seulement vos clé) à votre correspondant et vous pouvez communiquer.**
+**Attention vous devez mélanger vos caractères spéciaux (grâce à la commande: python MSE.py M), il ne doit en aucun cas ressembler à celui du code source. Prenez le code source et modifier le, créer une version personnalisée du projet, plus il ne ressemblera pas au code source originale, plus il a de chance qu'il soit difficile à casser, faite votre propre version du projet, généré votre clé de chiffrement, modifier les paramètres, envoyer le projet entier (pas seulement vos clés) à votre correspondant.**
 
 
-Modifier la longueur des caractères spéciaux qui sont générés.
+Modifier la longueur des caractères.
 **optez plûtot pour un language de type "sms" du genre: tu fait quoi  ---> tfk**
 modifier la liste des "caractères spéciaux"
 
@@ -128,6 +128,7 @@ Tantez de casser l'algorithme avec le programme: [MARS ATTACK](https://discord.g
 
 ![demo file 2](exemple/cap_ex.png)
 ![demo file 3](exemple/cap_ex2.png)
+
 
 
 

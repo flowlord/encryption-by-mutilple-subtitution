@@ -18,7 +18,7 @@
 
 	twitter: https://twitter.com/motionkerling
 
-	version name: CRC V
+	version name: CRC VI
 	
 """
 
@@ -61,7 +61,7 @@ from bloc_b import cipher,decipher
 from bloc_c import chaos,dechaos
 
 
-example_phrases = ['ceci est une longue phrase un peut chiante','meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous','que faites vous','a bientot','a la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien','mec tfk quoi la','alors la je fait expres de mettre une tres longue phrase pour des test','hallo zusammen heute']
+example_phrases = ['ceci est une longue phrase un peut chiante','meeting tonight for speak','rendez vous ce soir pour parler','hello world','on se voit ce soir','ou habitez vous','que faites vous','a bientot','a la semaine prochaine','je peux te parler','on peut se voir','jusqu ici tout va bien','mec tfk quoi la','alors la je fait expres de mettre une tres longue phrase pour des test','hallo zusammen heute','mec tfk quoi']
 
 
 def demo():

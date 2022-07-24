@@ -12,7 +12,6 @@ def reinitialiser():
 	"""
 	Suprime vos clé de chiffrement !
 	et le dossier __pycache__
-	pratique lorsque vous modifiez le code source
 	"""
 	
 	print('Vos clés de chiffrement vont être supprimés !')
@@ -25,16 +24,14 @@ def reinitialiser():
 		shutil.rmtree('__pycache__')
 		shutil.rmtree('configs/__pycache__')
 		
-		print('[ les clés chiffrement ont été supprimés ]')
+		print('[ les clés de chiffrement ont été supprimés ]')
 
 
 def gen_mdp():
 	p = ""
 	char = ascii_letters+digits+punctuation
-	
-	for c in range(randint(10,15)):
+	for c in range(randint(15,30)):
 		p = p + choice(char)
-	
 	return p
 
 
@@ -71,7 +68,7 @@ def mixer():
 	"""
 	reinitialiser()
 
-	init = open('initpat.txt','r',encoding='utf-8').readlines()
+	init = open('groupes_caractere.txt','r',encoding='utf-8').readlines()
 	init = "".join(init)
 	init = list(init)
 
@@ -80,7 +77,7 @@ def mixer():
 
 	res = "".join(init)
 
-	f = open('initpat.txt','w',encoding='utf-8')
+	f = open('groupes_caractere.txt','w',encoding='utf-8')
 	f.write(res)
 	f.close()
 
