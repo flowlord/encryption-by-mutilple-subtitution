@@ -14,7 +14,8 @@ IV) Je définie mes carcatères spéciaux
 	ces caractères auront un groupe de carcatère d'une longeur plus petit
 
 ---------------------------------------------------------------------------
-
+libre à vous de modifier ce fichier !
+faite votre propre version et le montrer à personne !
 Regénèrer vos clés de chiffrement si vous modifier ce fichier !!
 
 """
@@ -22,34 +23,28 @@ Regénèrer vos clés de chiffrement si vous modifier ce fichier !!
 from string import ascii_lowercase
 from random import shuffle
 
-
-# I)
 espace = " "
-caractere_sub = list(ascii_lowercase+espace)
-nbr_lettre_sub = len(caractere_sub)
-
-# II)
-groupe_caracteres_initial = "".join(open("initpat.txt",'r',encoding='utf-8').readlines())
-
-mileu = int(len(groupe_caracteres_initial)/2)
+carac_sub = list(ascii_lowercase+espace)
+len_carac_sub = len(carac_sub)
 
 
-# III)
-groupe_a = groupe_caracteres_initial[:mileu]
-groupe_b = groupe_caracteres_initial[mileu:]
+groupe_caracteres_initial = "".join(open("groupes_caractere.txt",'r',encoding='utf-8').readlines())
+
+milieu = int(len(groupe_caracteres_initial)/2)
+
+groupe_a = groupe_caracteres_initial[:milieu]
+groupe_b = groupe_caracteres_initial[milieu:]
+
+carac_special = 'esywqdntzcapv'+espace
+
+len_caractere = (5,7)
+longeur_carac_special = (2,3)
+
+nombre_cle = (5,10)
+
+mini,maxi = 100,300
 
 
-# IV)
-lettre_special = 'esdntxca'+espace
 
-# Oui je sais cette ligne ne sert à rien, mais c'est quand la personne ne connais pas le type de chiffrement ;)
-groupe_b = groupe_b+''.join(caractere_sub)*50+lettre_special*50
-
-longeur_caractere = (5,6)
-longeur_lettre_special = (3,4)
-
-nombre_cle = (2,3)
-
-mini,maxi = 100,500
 
 
