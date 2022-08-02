@@ -1,5 +1,0 @@
-Sans honneur que precaire sans liberte que provisoire jusqu a la decouverte du crime sans situation qu instable comme pour le poete la veille fete dans tous les salons applaudi dans tous les theatres de Londres chasse le lendemain de tous les garnis sans pouvoir trouver un oreiller ou reposer sa tete tournant la meule comme Samson et disant comme lui
-
-
-python3 main.py c "Sans honneur que precaire sans liberte que provisoire jusqu a la decouverte du crime sans situation qu instable comme pour le poete la veille fete dans tous les salons applaudi dans tous les theatres de Londres chasse le lendemain de tous les garnis sans pouvoir trouver un oreiller ou reposer sa tete tournant la meule comme Samson et disant comme lui"
-
