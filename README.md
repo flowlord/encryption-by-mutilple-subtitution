@@ -127,7 +127,6 @@ Tantez de casser l'algorithme avec le programme: [MARS ATTACK](https://discord.g
 [Serveur Discord officiel ](https://discord.gg/YQCufGwwwt)
 
 ![demo file 2](exemple/cap_ex.png)
-![demo file 3](exemple/cap_ex2.png)
 
 
 
